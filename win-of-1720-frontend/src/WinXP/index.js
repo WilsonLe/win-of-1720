@@ -35,10 +35,10 @@ const initState = {
   powerState: POWER_STATE.START,
 };
 const reducer = (state, action = { type: '' }) => {
-  ga.event({
-    category: 'XP interaction',
-    action: action.type,
-  });
+  // ga.event({
+  //   category: 'XP interaction',
+  //   action: action.type,
+  // });
   switch (action.type) {
     case ADD_APP:
       const app = state.apps.find(
