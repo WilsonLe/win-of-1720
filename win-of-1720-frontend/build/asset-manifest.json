@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.5f361e03.chunk.css",
-    "main.js": "/static/js/main.f8309f0b.chunk.js",
-    "main.js.map": "/static/js/main.f8309f0b.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.940a75d7.js",
-    "runtime-main.js.map": "/static/js/runtime-main.940a75d7.js.map",
-    "static/js/2.a3b573bf.chunk.js": "/static/js/2.a3b573bf.chunk.js",
-    "static/js/2.a3b573bf.chunk.js.map": "/static/js/2.a3b573bf.chunk.js.map",
+    "main.css": "/static/css/main.60ab980e.chunk.css",
+    "main.js": "/static/js/main.8d65987b.chunk.js",
+    "main.js.map": "/static/js/main.8d65987b.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.5c94a14c.js",
+    "runtime~main.js.map": "/static/js/runtime~main.5c94a14c.js.map",
+    "static/js/2.fc691960.chunk.js": "/static/js/2.fc691960.chunk.js",
+    "static/js/2.fc691960.chunk.js.map": "/static/js/2.fc691960.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.d22902786c0449088f63d9b4fbf4accf.js": "/precache-manifest.d22902786c0449088f63d9b4fbf4accf.js",
+    "precache-manifest.66a1c7ddb8a7689d682d8ce3ef68e200.js": "/precache-manifest.66a1c7ddb8a7689d682d8ce3ef68e200.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.a3b573bf.chunk.js.LICENSE.txt": "/static/js/2.a3b573bf.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.940a75d7.js",
-    "static/js/2.a3b573bf.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.f8309f0b.chunk.js"
-  ]
+    "static/css/main.60ab980e.chunk.css.map": "/static/css/main.60ab980e.chunk.css.map",
+    "static/media/all-programs.ico": "/static/media/all-programs.a48640a2.ico",
+    "static/media/error.wav": "/static/media/error.199b5352.wav",
+    "static/media/find.svg": "/static/media/find.cfc00209.svg",
+    "static/media/narrator.ico": "/static/media/narrator.e23232f0.ico",
+    "static/media/restart.ico": "/static/media/restart.bfcfd28f.ico",
+    "static/media/restore.ico": "/static/media/restore.8e8ae78a.ico",
+    "static/media/smile.svg": "/static/media/smile.33211a17.svg",
+    "static/media/view-info.ico": "/static/media/view-info.415b027d.ico"
+  }
 }
