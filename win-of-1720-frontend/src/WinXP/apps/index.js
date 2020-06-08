@@ -16,16 +16,15 @@ import notepadLarge from 'assets/windowsIcons/327(32x32).png';
 import winamp from 'assets/windowsIcons/winamp.png';
 import paintLarge from 'assets/windowsIcons/680(32x32).png';
 import paint from 'assets/windowsIcons/680(16x16).png';
-
-const gen = () => {
-  let id = -1;
-  return () => {
-    id += 1;
-    return id;
-  };
-};
-const genId = gen();
-const genIndex = gen();
+// const gen = () => {
+//   let id = -1;
+//   return () => {
+//     id += 1;
+//     return id;
+//   };
+// };
+// const genId = gen();
+// const genIndex = gen();
 export const defaultAppState = [
   // {
   //   component: InternetExplorer,
