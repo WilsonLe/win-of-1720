@@ -208,6 +208,7 @@ function MyComputer({ onClose }) {
                 </div>
               </div>
             </div>
+            {/* detail box */}
             <div className="com__content__left__card">
               <div className="com__content__left__card__header">
                 <div className="com__content__left__card__header__text">
@@ -278,6 +279,7 @@ function MyComputer({ onClose }) {
                 </div>
               </div>
             </div>
+            {/* end details box */}
           </div>
           <div className="com__content__right">
             <div className="com__content__right__card">

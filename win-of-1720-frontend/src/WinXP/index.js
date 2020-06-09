@@ -1,6 +1,7 @@
 import React, { useReducer, useRef, useCallback } from 'react';
 import styled, { keyframes } from 'styled-components';
 import useMouse from 'react-use/lib/useMouse';
+import desktopBackground from '../assets/winxpdesktop.webp';
 import ga from 'react-ga';
 
 import {
@@ -270,7 +271,7 @@ function WinXP() {
         payload: { x: mouse.docX, y: mouse.docY },
       });
     console.log("bbbbbbbbbbb");
-    
+
   }
   function onMouseUpDesktop(e) {
     console.log("cccccccccccccccc");
@@ -357,7 +358,7 @@ const Container = styled.div`
   height: 100%;
   overflow: hidden;
   position: relative;
-  background: url(https://i.imgur.com/Zk6TR5k.jpg) no-repeat center center fixed;
+  background: url(${desktopBackground}) no-repeat center center fixed;
   background-size: cover;
   animation: ${({ state }) => animation[state]} 5s forwards;
   *:not(input):not(textarea) {
