@@ -57,7 +57,7 @@ function Icon({
 }) {
   const ref = useRef(null);
   function _onMouseDown() {
-    onMouseDown(id);
+    onMouseDown(id,component);
   }
   function _onDoubleClick() {
     onDoubleClick(component);
