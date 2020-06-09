@@ -20,7 +20,7 @@ import menu from 'assets/windowsIcons/358(32x32).png';
 import folder from 'assets/windowsIcons/318(48x48).png';
 import folderOpen from 'assets/windowsIcons/337(32x32).png';
 import disk from 'assets/windowsIcons/334(48x48).png';
-import cd from 'assets/windowsIcons/111(48x48).png';
+// import cd from 'assets/windowsIcons/111(48x48).png';
 import dropdown from 'assets/windowsIcons/dropdown.png';
 import pullup from 'assets/windowsIcons/pullup.png';
 import logo from 'assets/github-logo.png';
@@ -326,13 +326,13 @@ function MyComputer({ onClose }) {
                   />
                   <div className="com__content__right__card__img-container">
                     <div className="com__content__right__card__text">
-                      Local Disk (C:)
+                      DATA (17:)
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="com__content__right__card">
+            {/* <div className="com__content__right__card">
               <div className="com__content__right__card__header">
                 Devices with Removable Storage
               </div>
@@ -350,7 +350,7 @@ function MyComputer({ onClose }) {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="com__content__right__card com__content__right__card--me">
               <div className="com__content__right__card__header">
                 About Me :)

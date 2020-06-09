@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import useMouse from 'react-use/lib/useMouse';
 import desktopBackground from '../assets/winxpdesktop.webp';
 import ga from 'react-ga';
-import {isMobile, isBrowser} from 'react-device-detect';
+import {isMobile} from 'react-device-detect';
 import {
   ADD_APP,
   DEL_APP,
