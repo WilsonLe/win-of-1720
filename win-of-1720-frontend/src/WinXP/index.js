@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import useMouse from 'react-use/lib/useMouse';
 import desktopBackground from '../assets/winxpdesktop.webp';
 import ga from 'react-ga';
-
+import {isMobile, isBrowser} from 'react-device-detect';
 import {
   ADD_APP,
   DEL_APP,
@@ -218,9 +218,16 @@ function WinXP() {
       dispatch({ type: FOCUS_APP, payload: id });
     }
   }
-  function onMouseDownIcon(id) {
-    dispatch({ type: FOCUS_ICON, payload: id });
+  function onMouseDownIcon(id, component) {
+      dispatch({ type: FOCUS_ICON, payload: id });
+      if (isMobile){
+        const appSetting = Object.values(appSettings).find(
+          setting => setting.component === component,
+        );
+        dispatch({ type: ADD_APP, payload: appSetting });
+      }
   }
+
   function onDoubleClickIcon(component) {
     const appSetting = Object.values(appSettings).find(
       setting => setting.component === component,
@@ -264,19 +271,14 @@ function WinXP() {
       });
   }
   function onMouseDownDesktop(e) {
-    console.log("aaaaaaa");
     if (e.target === e.currentTarget)
       dispatch({
         type: START_SELECT,
         payload: { x: mouse.docX, y: mouse.docY },
       });
-    console.log("bbbbbbbbbbb");
-
   }
   function onMouseUpDesktop(e) {
-    console.log("cccccccccccccccc");
     dispatch({ type: END_SELECT });
-    console.log("cccccccccccccccc");
   }
   function onIconsSelected(iconIds) {
     dispatch({ type: SELECT_ICONS, payload: iconIds });
