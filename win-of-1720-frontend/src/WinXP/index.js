@@ -35,10 +35,10 @@ const initState = {
   powerState: POWER_STATE.START,
 };
 const reducer = (state, action = { type: '' }) => {
-  // ga.event({
-  //   category: 'XP interaction',
-  //   action: action.type,
-  // });
+  ga.event({
+    category: 'XP interaction',
+    action: action.type,
+  });
   switch (action.type) {
     case ADD_APP:
       const app = state.apps.find(
@@ -263,14 +263,19 @@ function WinXP() {
       });
   }
   function onMouseDownDesktop(e) {
+    console.log("aaaaaaa");
     if (e.target === e.currentTarget)
       dispatch({
         type: START_SELECT,
         payload: { x: mouse.docX, y: mouse.docY },
       });
+    console.log("bbbbbbbbbbb");
+    
   }
   function onMouseUpDesktop(e) {
+    console.log("cccccccccccccccc");
     dispatch({ type: END_SELECT });
+    console.log("cccccccccccccccc");
   }
   function onIconsSelected(iconIds) {
     dispatch({ type: SELECT_ICONS, payload: iconIds });
