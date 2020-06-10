@@ -21,11 +21,10 @@ if (module.hot && !window.frameElement) {
   });
 }
 
-
-var delayInMilliseconds = 2000;
-
+//AFTER FINISH RENDER
+const delayInMilliseconds = 2000;
 setTimeout(function() {
+  //code to be exe after delay:
   document.getElementById('loader').remove();
   document.getElementById('root').style.visibility = "visible";
 }, delayInMilliseconds);
-
