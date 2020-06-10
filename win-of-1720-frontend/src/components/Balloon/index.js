@@ -23,7 +23,7 @@ function Balloon({ startAfter = 3000, duration = 15000 }) {
     start && (
       <Div show={show}>
         <div className="balloon__container">
-          <button onClick={() => setShow(false)} className="balloon__close" />
+          <button onClick={() => setShow(false)} className="balloon__close" aria-label="Close balloon"/>
           <div className="balloon__header">
             <img className="balloon__header__img" src={risk} alt="risk" />
             <span className="balloon__header__text">
