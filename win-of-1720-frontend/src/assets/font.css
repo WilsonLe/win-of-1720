@@ -1,9 +1,9 @@
-@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap&subset=vietnamese');
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 14px;
 }
 
