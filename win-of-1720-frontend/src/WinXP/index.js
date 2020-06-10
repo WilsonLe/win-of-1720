@@ -1,7 +1,6 @@
 import React, { useReducer, useRef, useCallback } from 'react';
 import styled, { keyframes } from 'styled-components';
 import useMouse from 'react-use/lib/useMouse';
-import desktopBackground from '../assets/winxpdesktop.webp';
 import ga from 'react-ga';
 import {isMobile} from 'react-device-detect';
 import {
@@ -25,6 +24,7 @@ import Footer from './Footer';
 import Windows from './Windows';
 import Icons from './Icons';
 import { DashedBox } from 'components';
+import desktopBackground from '../assets/desktopBackground.jpg'
 
 const initState = {
   apps: defaultAppState,

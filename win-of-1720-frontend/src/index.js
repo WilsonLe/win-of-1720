@@ -18,3 +18,11 @@ if (module.hot && !window.frameElement) {
     ReactDOM.render(<NextApp />, document.getElementById('root'));
   });
 }
+
+//AFTER FINISH RENDER
+const delayInMilliseconds = 2000;
+setTimeout(function() {
+  //code to be exe after delay:
+  document.getElementById('loader').remove();
+  document.getElementById('root').style.visibility = "visible";
+}, delayInMilliseconds);
