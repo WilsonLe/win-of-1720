@@ -24,6 +24,7 @@ import Footer from './Footer';
 import Windows from './Windows';
 import Icons from './Icons';
 import { DashedBox } from 'components';
+import desktopBackground from '../assets/desktopBackground.jpg'
 
 const initState = {
   apps: defaultAppState,
@@ -359,7 +360,7 @@ const Container = styled.div`
   height: 100%;
   overflow: hidden;
   position: relative;
-  background: url(https://i.imgur.com/Zk6TR5k.jpg) no-repeat center center fixed;
+  background: url(${desktopBackground}) no-repeat center center fixed;
   background-size: cover;
   animation: ${({ state }) => animation[state]} 5s forwards;
   *:not(input):not(textarea) {
