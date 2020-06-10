@@ -7,8 +7,6 @@ import 'assets/font.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-document.getElementById('root').style.visibility = "hidden";
-
 ReactDOM.render(<App />, document.getElementById('root'));
 
 serviceWorker.register();
