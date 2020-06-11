@@ -20,7 +20,7 @@ if (module.hot && !window.frameElement) {
 }
 
 //AFTER FINISH RENDER
-const delayInMilliseconds = 2000;
+const delayInMilliseconds = 2500;
 setTimeout(function() {
   //code to be exe after delay:
   document.getElementById('loader').remove();
