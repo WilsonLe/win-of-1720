@@ -16,7 +16,7 @@
 #loader #xp {
     height: 10em;
     width: 10em;
-    padding-bottom: 1em;
+    padding-bottom: .5em;
     padding-left: .5em;
 }
 #loader .windows-boot {
@@ -31,7 +31,7 @@
 
 #loader .logo p {
     color: white;
-    font-family: sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
 }
