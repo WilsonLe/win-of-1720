@@ -1,22 +1,25 @@
-body {
-    margin: 0;
+#loader {
+    position: fixed;
+    z-index: 99;
     height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: black;
 }
-#row1 {
+
+#loader #row1 {
     display: flex;
     flex-direction: row;
 }
-#xp {
+#loader #xp {
     height: 10em;
     width: 10em;
-    padding-bottom: 1em;
+    padding-bottom: .5em;
     padding-left: .5em;
 }
-.windows-boot {
+#loader .windows-boot {
     width: 21.5em;
     height: 20em;
     font-size: 10px;
@@ -26,25 +29,25 @@ body {
     align-items: center;
 }
 
-.logo p {
+#loader .logo p {
     color: white;
-    font-family: sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
 }
-.logo .ms {
+#loader .logo .ms {
     font-size: 1.3em;
     font-weight: lighter;
     line-height: 1em;
     padding-bottom: 0.1em;
 }
-#botify{
+#loader #botify{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     vertical-align: bottom;
 }
-.logo .ms::after {
+#loader .logo .ms::after {
     content: '\00a9';
     font-size: 0.625em;
     vertical-align: top;
@@ -53,13 +56,13 @@ body {
     left: 0.2em;
 }
 
-.logo .win {
+#loader .logo .win {
     font-size: 4.2em;
     font-weight: bold;
     line-height: 86%;
 }
 
-.logo .win::after {
+#loader .logo .win::after {
     content: 'OF';
     font-size: 0.6em;
     vertical-align: top;
@@ -68,16 +71,16 @@ body {
     color: tomato;
 }
 
-.logo .pro {
+#loader .logo .pro {
     font-size: 2em;
     font-weight: lighter;
     line-height: 1em;
     padding-left: 0.2em;
 }
 
-.bar {
+#loader .bar {
     width: 15em;
-    height: 1em;
+    height: 2em;
     border: 0.2em solid silver;
     border-radius: 0.7em;
     position: relative;
@@ -85,7 +88,7 @@ body {
     overflow: hidden;
 }
 
-.bar::before {
+#loader .bar::before {
     content: '';
     position: absolute;
     width: 3em;
