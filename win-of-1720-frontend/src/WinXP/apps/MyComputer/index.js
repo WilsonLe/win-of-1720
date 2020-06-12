@@ -209,7 +209,7 @@ function MyComputer({ onClose }) {
               </div>
             </div>
             {/* detail box */}
-            <div className="com__content__left__card">
+            {/* <div className="com__content__left__card">
               <div className="com__content__left__card__header">
                 <div className="com__content__left__card__header__text">
                   Details
@@ -278,7 +278,7 @@ function MyComputer({ onClose }) {
                   </ga.OutboundLink>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* end details box */}
           </div>
           <div className="com__content__right">
@@ -353,12 +353,12 @@ function MyComputer({ onClose }) {
             </div> */}
             <div className="com__content__right__card com__content__right__card--me">
               <div className="com__content__right__card__header">
-                About Me :)
+                It's a hello from
               </div>
               <div className="com__content__right__card__content">
                 <ga.OutboundLink
-                  eventLabel="https://github.com/ShizukuIchi"
-                  to="https://github.com/ShizukuIchi"
+                  eventLabel="https://www.facebook.com/dnhuan"
+                  to="https://www.facebook.com/dnhuan"
                   className="com__content__right__card__item--me"
                   target="_blank"
                 >
@@ -367,21 +367,21 @@ function MyComputer({ onClose }) {
                     src={logo}
                     alt="control"
                   />
-                  <div className="com__content__right__card__text">Github</div>
+                  <div className="com__content__right__card__text">Huan Doan Ngoc</div>
                 </ga.OutboundLink>
                 <ga.OutboundLink
-                  eventLabel="https://sh1zuku.csie.io"
-                  to="https://sh1zuku.csie.io"
+                  eventLabel="https://wilsonle.me/"
+                  to="https://wilsonle.me/"
                   className="com__content__right__card__item--me"
                   target="_blank"
                 >
                   <img
                     className="com__content__right__card__img"
-                    src="https://a.ppy.sh/2926513_1448497605.png"
+                    src={logo}
                     alt="control"
                   />
                   <div className="com__content__right__card__text">
-                    My Website
+                    Anh Minh Le
                   </div>
                 </ga.OutboundLink>
               </div>
