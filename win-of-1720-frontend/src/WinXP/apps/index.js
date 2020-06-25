@@ -307,12 +307,12 @@ export const appSettings = {
     },
     component: Surprise,
     defaultSize: {
-      width: 720,
-      height: 480,
+      width: window.innerWidth,
+      height: window.innerHeight,
     },
     defaultOffset: {
-      x: 280,
-      y: 70,
+      x: 0,
+      y: 0,
     },
     resizable: false,
     minimized: false,
