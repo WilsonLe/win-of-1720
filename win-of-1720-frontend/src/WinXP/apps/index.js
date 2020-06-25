@@ -113,12 +113,19 @@ export const defaultAppState = [
 
 export const defaultIconState = [
   {
-    id: 0,
-    icon: ie,
-    title: 'Internet Explorer',
-    component: InternetExplorer,
+    id: 6,
+    icon: sup,
+    title: 'Suprise',
+    component: Surprise,
     isFocus: false,
   },
+  // {
+  //   id: 0,
+  //   icon: ie,
+  //   title: 'Internet Explorer',
+  //   component: InternetExplorer,
+  //   isFocus: false,
+  // },
   {
     id: 1,
     icon: mine,
@@ -133,32 +140,25 @@ export const defaultIconState = [
     component: MyComputer,
     isFocus: false,
   },
-  {
-    id: 3,
-    icon: notepadLarge,
-    title: 'Notepad',
-    component: Notepad,
-    isFocus: false,
-  },
-  {
-    id: 4,
-    icon: winamp,
-    title: 'Winamp',
-    component: Winamp,
-    isFocus: false,
-  },
+  // {
+  //   id: 3,
+  //   icon: notepadLarge,
+  //   title: 'Notepad',
+  //   component: Notepad,
+  //   isFocus: false,
+  // },
+  // {
+  //   id: 4,
+  //   icon: winamp,
+  //   title: 'Winamp',
+  //   component: Winamp,
+  //   isFocus: false,
+  // },
   {
     id: 5,
     icon: paintLarge,
     title: 'Paint',
     component: Paint,
-    isFocus: false,
-  },
-  {
-    id: 6,
-    icon: sup,
-    title: 'Suprise',
-    component: Surprise,
     isFocus: false,
   },
 ];
