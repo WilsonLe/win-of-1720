@@ -5,6 +5,7 @@ import MyComputer from './MyComputer';
 import Notepad from './Notepad';
 import Winamp from './Winamp';
 import Paint from './Paint';
+import Surprise from './Surprise'
 import iePaper from 'assets/windowsIcons/ie-paper.png';
 import ie from 'assets/windowsIcons/ie.png';
 import mine from 'assets/minesweeper/mine-icon.png';
@@ -16,6 +17,7 @@ import notepadLarge from 'assets/windowsIcons/327(32x32).png';
 import winamp from 'assets/windowsIcons/winamp.png';
 import paintLarge from 'assets/windowsIcons/680(32x32).png';
 import paint from 'assets/windowsIcons/680(16x16).png';
+import sup from 'assets/windowsIcons/sup(16x16).png'
 // const gen = () => {
 //   let id = -1;
 //   return () => {
@@ -150,6 +152,13 @@ export const defaultIconState = [
     icon: paintLarge,
     title: 'Paint',
     component: Paint,
+    isFocus: false,
+  },
+  {
+    id: 6,
+    icon: sup,
+    title: 'Suprise',
+    component: Surprise,
     isFocus: false,
   },
 ];
@@ -291,6 +300,25 @@ export const appSettings = {
     maximized: window.innerWidth < 800,
     multiInstance: true,
   },
+  Surprise: {
+    header: {
+      icon: sup,
+      title: 'Surprise.exe',
+    },
+    component: Surprise,
+    defaultSize: {
+      width: 720,
+      height: 480,
+    },
+    defaultOffset: {
+      x: 280,
+      y: 70,
+    },
+    resizable: false,
+    minimized: false,
+    maximized: false,
+    multiInstance: false,
+  }
 };
 
 export { InternetExplorer, Minesweeper, ErrorBox, MyComputer, Notepad, Winamp };
