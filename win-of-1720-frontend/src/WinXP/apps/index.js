@@ -5,6 +5,7 @@ import MyComputer from './MyComputer';
 import Notepad from './Notepad';
 import Winamp from './Winamp';
 import Paint from './Paint';
+import Surprise from './Surprise'
 import iePaper from 'assets/windowsIcons/ie-paper.png';
 import ie from 'assets/windowsIcons/ie.png';
 import mine from 'assets/minesweeper/mine-icon.png';
@@ -16,6 +17,7 @@ import notepadLarge from 'assets/windowsIcons/327(32x32).png';
 import winamp from 'assets/windowsIcons/winamp.png';
 import paintLarge from 'assets/windowsIcons/680(32x32).png';
 import paint from 'assets/windowsIcons/680(16x16).png';
+import sup from 'assets/windowsIcons/sup(16x16).png'
 // const gen = () => {
 //   let id = -1;
 //   return () => {
@@ -111,12 +113,19 @@ export const defaultAppState = [
 
 export const defaultIconState = [
   {
-    id: 0,
-    icon: ie,
-    title: 'Internet Explorer',
-    component: InternetExplorer,
+    id: 6,
+    icon: sup,
+    title: 'Suprise',
+    component: Surprise,
     isFocus: false,
   },
+  // {
+  //   id: 0,
+  //   icon: ie,
+  //   title: 'Internet Explorer',
+  //   component: InternetExplorer,
+  //   isFocus: false,
+  // },
   {
     id: 1,
     icon: mine,
@@ -131,20 +140,20 @@ export const defaultIconState = [
     component: MyComputer,
     isFocus: false,
   },
-  {
-    id: 3,
-    icon: notepadLarge,
-    title: 'Notepad',
-    component: Notepad,
-    isFocus: false,
-  },
-  {
-    id: 4,
-    icon: winamp,
-    title: 'Winamp',
-    component: Winamp,
-    isFocus: false,
-  },
+  // {
+  //   id: 3,
+  //   icon: notepadLarge,
+  //   title: 'Notepad',
+  //   component: Notepad,
+  //   isFocus: false,
+  // },
+  // {
+  //   id: 4,
+  //   icon: winamp,
+  //   title: 'Winamp',
+  //   component: Winamp,
+  //   isFocus: false,
+  // },
   {
     id: 5,
     icon: paintLarge,
@@ -291,6 +300,25 @@ export const appSettings = {
     maximized: window.innerWidth < 800,
     multiInstance: true,
   },
+  Surprise: {
+    header: {
+      icon: sup,
+      title: 'Surprise.exe',
+    },
+    component: Surprise,
+    defaultSize: {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    },
+    defaultOffset: {
+      x: 0,
+      y: 0,
+    },
+    resizable: false,
+    minimized: false,
+    maximized: false,
+    multiInstance: false,
+  }
 };
 
 export { InternetExplorer, Minesweeper, ErrorBox, MyComputer, Notepad, Winamp };
