@@ -115,7 +115,7 @@ export const defaultIconState = [
   {
     id: 6,
     icon: sup,
-    title: 'Suprise',
+    title: 'Surprise',
     component: Surprise,
     isFocus: false,
   },
