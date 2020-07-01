@@ -5,7 +5,7 @@ import MyComputer from './MyComputer';
 import Notepad from './Notepad';
 import Winamp from './Winamp';
 import Paint from './Paint';
-import Surprise from './Surprise'
+import clipK12 from './clipK12'
 import iePaper from 'assets/windowsIcons/ie-paper.png';
 import ie from 'assets/windowsIcons/ie.png';
 import mine from 'assets/minesweeper/mine-icon.png';
@@ -115,8 +115,13 @@ export const defaultIconState = [
   {
     id: 6,
     icon: sup,
+<<<<<<< HEAD
     title: 'Surprise',
     component: Surprise,
+=======
+    title: 'Clip Khối.exe',
+    component: clipK12,
+>>>>>>> master
     isFocus: false,
   },
   // {
@@ -300,12 +305,12 @@ export const appSettings = {
     maximized: window.innerWidth < 800,
     multiInstance: true,
   },
-  Surprise: {
+  clipK12: {
     header: {
       icon: sup,
-      title: 'Surprise.exe',
+      title: 'Clip Khối.exe',
     },
-    component: Surprise,
+    component: clipK12,
     defaultSize: {
       width: window.innerWidth,
       height: window.innerHeight,
