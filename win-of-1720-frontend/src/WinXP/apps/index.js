@@ -115,13 +115,8 @@ export const defaultIconState = [
   {
     id: 6,
     icon: sup,
-<<<<<<< HEAD
-    title: 'Surprise',
-    component: Surprise,
-=======
     title: 'Clip Khối.exe',
     component: clipK12,
->>>>>>> master
     isFocus: false,
   },
   // {
