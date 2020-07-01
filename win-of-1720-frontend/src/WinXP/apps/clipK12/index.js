@@ -9,13 +9,14 @@ function Surprise( {onClose, isFocus}) {
             }}
         >
             <iframe
-                src="https://goodbye-1720-git-master.dnhuan.vercel.app"
-                frameBorder="0"
-                title="Surprise!"
+                src="https://www.youtube-nocookie.com/embed/3S86Q7koOOw?rel=0&amp;modestbranding=1"
+                allow='autoplay'
+                allowFullScreen
+                title="Clip Khối 1720!"
                 style={{
                     display: 'block',
                     width: '100%',
-                    height: '100%',
+                    height: '97%'
                 }}
             />
             {!isFocus && (
