@@ -1,35 +1,58 @@
-import InternetExplorer from './InternetExplorer';
-import Minesweeper from './Minesweeper';
-import ErrorBox from './ErrorBox';
-import MyComputer from './MyComputer';
-import Notepad from './Notepad';
-import Winamp from './Winamp';
-import Paint from './Paint';
-import clipK12 from './clipK12'
-import baihatkhoi from './baihatkhoi'
-import iePaper from 'assets/windowsIcons/ie-paper.png';
-import ie from 'assets/windowsIcons/ie.png';
-import mine from 'assets/minesweeper/mine-icon.png';
-import error from 'assets/windowsIcons/897(16x16).png';
-import computer from 'assets/windowsIcons/676(16x16).png';
-import computerLarge from 'assets/windowsIcons/676(32x32).png';
-import notepad from 'assets/windowsIcons/327(16x16).png';
-import notepadLarge from 'assets/windowsIcons/327(32x32).png';
-import winamp from 'assets/windowsIcons/winamp.png';
-import paintLarge from 'assets/windowsIcons/680(32x32).png';
-import paint from 'assets/windowsIcons/680(16x16).png';
-import sup from 'assets/windowsIcons/sup(16x16).png'
-import bhk from 'assets/windowsIcons/sup(16x16).png'
-// const gen = () => {
-//   let id = -1;
-//   return () => {
-//     id += 1;
-//     return id;
-//   };
-// };
-// const genId = gen();
-// const genIndex = gen();
+import InternetExplorer from "./InternetExplorer";
+import Minesweeper from "./Minesweeper";
+import ErrorBox from "./ErrorBox";
+import MyComputer from "./MyComputer";
+import Notepad from "./Notepad";
+import Winamp from "./Winamp";
+import Paint from "./Paint";
+import clipK12 from "./clipK12";
+import BaiHatKhoi from "./BaiHatKhoi";
+import iePaper from "assets/windowsIcons/ie-paper.png";
+// import ie from 'assets/windowsIcons/ie.png';
+import mine from "assets/minesweeper/mine-icon.png";
+import error from "assets/windowsIcons/897(16x16).png";
+import computer from "assets/windowsIcons/676(16x16).png";
+import computerLarge from "assets/windowsIcons/676(32x32).png";
+import notepad from "assets/windowsIcons/327(16x16).png";
+// import notepadLarge from 'assets/windowsIcons/327(32x32).png';
+import winamp from "assets/windowsIcons/winamp.png";
+import paintLarge from "assets/windowsIcons/680(32x32).png";
+import paint from "assets/windowsIcons/680(16x16).png";
+import sup from "assets/windowsIcons/sup(16x16).png";
+import bhk from "assets/windowsIcons/sup(16x16).png";
+
+const gen = () => {
+  let id = -1;
+  return () => {
+    id += 1;
+    return id;
+  };
+};
+
+const genId = gen();
+const genIndex = gen();
+
 export const defaultAppState = [
+  {
+    component: BaiHatKhoi,
+    header: {
+      title: "Bài hát khối.mp3",
+      icon: bhk,
+    },
+    defaultSize: {
+      width: 700,
+      height: 500,
+    },
+    defaultOffset: {
+      x: 130,
+      y: 20,
+    },
+    resizable: true,
+    minimized: false,
+    maximized: true,
+    id: genId(),
+    zIndex: genIndex(),
+  },
   // {
   //   component: InternetExplorer,
   //   header: {
@@ -117,14 +140,14 @@ export const defaultIconState = [
   {
     id: 7,
     icon: bhk,
-    title: 'Bài hát khối.mp3',
-    component: baihatkhoi,
+    title: "Bài hát khối.mp3",
+    component: BaiHatKhoi,
     isFocus: false,
   },
   {
     id: 6,
     icon: sup,
-    title: 'Clip Khối.exe',
+    title: "Clip Khối.exe",
     component: clipK12,
     isFocus: false,
   },
@@ -138,14 +161,14 @@ export const defaultIconState = [
   {
     id: 1,
     icon: mine,
-    title: 'Minesweeper',
+    title: "Minesweeper",
     component: Minesweeper,
     isFocus: false,
   },
   {
     id: 2,
     icon: computerLarge,
-    title: 'My Computer',
+    title: "My Computer",
     component: MyComputer,
     isFocus: false,
   },
@@ -166,17 +189,17 @@ export const defaultIconState = [
   {
     id: 5,
     icon: paintLarge,
-    title: 'Paint',
+    title: "Paint",
     component: Paint,
     isFocus: false,
   },
 ];
 
 export const appSettings = {
-  'Internet Explorer': {
+  "Internet Explorer": {
     header: {
       icon: iePaper,
-      title: 'InternetExplorer',
+      title: "InternetExplorer",
     },
     component: InternetExplorer,
     defaultSize: {
@@ -195,7 +218,7 @@ export const appSettings = {
   Minesweeper: {
     header: {
       icon: mine,
-      title: 'Minesweeper',
+      title: "Minesweeper",
     },
     component: Minesweeper,
     defaultSize: {
@@ -214,8 +237,8 @@ export const appSettings = {
   Error: {
     header: {
       icon: error,
-      title: 'C:\\',
-      buttons: ['close'],
+      title: "C:\\",
+      buttons: ["close"],
       noFooterWindow: true,
     },
     component: ErrorBox,
@@ -232,10 +255,10 @@ export const appSettings = {
     maximized: false,
     multiInstance: true,
   },
-  'My Computer': {
+  "My Computer": {
     header: {
       icon: computer,
-      title: 'My Computer',
+      title: "My Computer",
     },
     component: MyComputer,
     defaultSize: {
@@ -254,7 +277,7 @@ export const appSettings = {
   Notepad: {
     header: {
       icon: notepad,
-      title: 'Untitled - Notepad',
+      title: "Untitled - Notepad",
     },
     component: Notepad,
     defaultSize: {
@@ -273,7 +296,7 @@ export const appSettings = {
   Winamp: {
     header: {
       icon: winamp,
-      title: 'Winamp',
+      title: "Winamp",
       invisible: true,
     },
     component: Winamp,
@@ -293,7 +316,7 @@ export const appSettings = {
   Paint: {
     header: {
       icon: paint,
-      title: 'Untitled - Paint',
+      title: "Untitled - Paint",
     },
     component: Paint,
     defaultSize: {
@@ -312,7 +335,7 @@ export const appSettings = {
   clipK12: {
     header: {
       icon: sup,
-      title: 'Clip Khối.exe',
+      title: "Clip Khối.exe",
     },
     component: clipK12,
     defaultSize: {
@@ -331,9 +354,9 @@ export const appSettings = {
   baihatkhoi: {
     header: {
       icon: bhk,
-      title: 'Bài hát khối.mp3',
+      title: "Bài hát khối.mp3",
     },
-    component: baihatkhoi,
+    component: BaiHatKhoi,
     defaultSize: {
       width: window.innerWidth,
       height: window.innerHeight,
@@ -346,7 +369,7 @@ export const appSettings = {
     minimized: false,
     maximized: false,
     multiInstance: false,
-  }
+  },
 };
 
 export { InternetExplorer, Minesweeper, ErrorBox, MyComputer, Notepad, Winamp };

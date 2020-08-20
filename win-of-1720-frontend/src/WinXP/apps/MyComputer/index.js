@@ -24,7 +24,7 @@ import disk from 'assets/windowsIcons/334(48x48).png';
 import dropdown from 'assets/windowsIcons/dropdown.png';
 import pullup from 'assets/windowsIcons/pullup.png';
 import logo from 'assets/github-logo.png';
-import mine from 'assets/minesweeper/mine-icon.png';
+// import mine from 'assets/minesweeper/mine-icon.png';
 import windows from 'assets/windowsIcons/windows.png';
 
 function MyComputer({ onClose }) {

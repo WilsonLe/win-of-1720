@@ -1,36 +1,38 @@
-import React from 'react'
-function Surprise( {onClose, isFocus}) {
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import fileBHK from "assets/sounds/BAIHATKHOI-MASTERED.mp3"
+
+let audioStream = new Audio(fileBHK)
+
+
+export default function BaiHatKhoi( {onClose, isFocus}) {
+    
+    const [playStatus, setPlayStatus] = useState({})
+
+    const play = () => {
+        audioStream.play();
+    }
+    
+    const pause = () => {
+        audioStream.pause();
+    }
+
+    const stop = () => {
+        audioStream.pause();
+        audioStream.currentTime = 0;
+    }
+
     return (
-        <div
-            style={{
-                width: '100%',
-                height: '100%',
-                position: 'relative',
-            }}
-        >
-            <iframe
-                src="https://www.youtube-nocookie.com/embed/3S86Q7koOOw?rel=0&amp;modestbranding=1"
-                allow='autoplay'
-                allowFullScreen
-                title="Clip Khối 1720!"
-                style={{
-                    display: 'block',
-                    width: '100%',
-                    height: '97%'
-                }}
-            />
-            {!isFocus && (
-                <div
-                    style={{
-                        width: '100%',
-                        height: '100%',
-                        position: 'absolute',
-                        left: 0,
-                        top: 0,
-                    }}
-                />
-            )}
-        </div>
+        <Div>
+            <button onClick={play}>Play</button>
+            <button onClick={pause}>Pause</button>
+            <button onClick={stop}>Stop</button>
+        </Div>
     );
 }
-export default Surprise;
+
+const Div = styled.div`
+    background: white;
+    height: 100%;
+    width: auto;
+`
