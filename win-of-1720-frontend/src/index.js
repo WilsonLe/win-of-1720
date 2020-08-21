@@ -5,11 +5,11 @@ import './index.css';
 import 'assets/clear.css';
 import 'assets/font.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+// import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
-serviceWorker.register();
+// serviceWorker.register();
 
 if (module.hot && !window.frameElement) {
   console.log('HMR enabled');
