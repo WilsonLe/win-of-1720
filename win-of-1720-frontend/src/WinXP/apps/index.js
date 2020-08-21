@@ -47,7 +47,7 @@ export const defaultAppState = [
       x: 130,
       y: 20,
     },
-    resizable: true,
+    resizable: false,
     minimized: false,
     maximized: true,
     id: genId(),
