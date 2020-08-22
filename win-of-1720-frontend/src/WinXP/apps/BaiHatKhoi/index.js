@@ -1,113 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
-import fileBHK from "assets/sounds/BAIHATKHOI-MASTERED.mp3";
-import mediaLogo from "assets/1720-logo.jpg";
-import playButton from "assets/play-button.jpg"
-import stopButton from "assets/stop-button.jpg";
-import pauseButton from "assets/pause-button.jpg";
-
-let audioStream = new Audio(fileBHK)
-let audioTracker;
-
-function timeParser(ms) {
-    let sec = ms / 1000
-    let min = parseInt(sec / 60);
-    sec = parseInt(sec % 60);
-    if (sec < 10) sec = `0${sec}`
-    if (isNaN(sec)) sec = "00"
-    if (isNaN(min)) min = "0"
-    return `${min}:${sec}`
-}
+import React, { useEffect } from 'react';
 
 export default function BaiHatKhoi({ onClose, isFocus }) {
 
-    const [playtime, setPlaytime] = useState({ time: 0 });
-
     useEffect(() => {
         return () => {
-            stop()
+            console.log("aaa")
         }
     }, [])
 
-    const play = () => {
-        audioStream.play();
-        audioTracker = setInterval(() => {
-            setPlaytime({ time: parseInt(audioStream.currentTime * 1000) })
-        }, 100);
-    }
-
-    const pause = () => {
-        audioStream.pause();
-        clearInterval(audioTracker);
-    }
-
-    const stop = () => {
-        audioStream.pause();
-        audioStream.currentTime = 0;
-        clearInterval(audioTracker);
-        setPlaytime({ time: 0 });
-    }
-
     return (
-        <Div>
-            <MediaCanvas>
-                <img src={mediaLogo} alt="1720 Logo" width="auto" height="150vh"></img>
-            </MediaCanvas>
-
-            <Timer style={{ "gridColumn": "1/1", "gridRow": "3/3" }}>{timeParser(playtime.time)}</Timer>
-
-            <TimeBar>
-                <TimeBarProgress style={{ width: playtime.time / parseInt(audioStream.duration * 10) + "%" }}></TimeBarProgress>
-            </TimeBar>
-
-            <Timer style={{ "gridColumn": "3/3", "gridRow": "3/3" }}>{timeParser(parseInt(audioStream.duration * 1000))}</Timer>
-
-            <AudioControl>
-                <img onClick={pause} src={pauseButton} alt="Pause" width="auto" height="40vh"></img>
-                <img onClick={play} src={playButton} alt="Play" width="auto" height="50vh"></img>
-                <img onClick={stop} src={stopButton} alt="Stop" width="auto" height="40vh"></img>
-            </AudioControl>
-
-        </Div>
+        <div style={{ background: "white", height: "100%", width: "auto" }}>
+            <iframe title="#CBGRD" width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/879606343&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <div style={{"fontSize":"10px","color":"#cccccc","lineBreak":"anywhere","wordBreak":"normal","overflow":"hidden","whiteSpace":"nowrap","textOverflow":"ellipsis","fontFamily":"Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif","fontWeight":"100"}}><a href="https://soundcloud.com/hai-kh-ng-m-t-b-y" title="17: /một • bảy • hai • không/" target="_blank" style={{"color":"#cccccc","textDecoration":"none"}}>17: /một • bảy • hai • không/</a> · <a href="https://soundcloud.com/hai-kh-ng-m-t-b-y/c-bao-gi-r-i-i" title="Có Bao Giờ Rời Đi?" target="_blank" style={{"color":"#cccccc","textDecoration":"none"}}>Có Bao Giờ Rời Đi?</a></div>
+        </div>
     );
 }
-
-const Div = styled.div`
-    background: white;
-    height: 100%;
-    width: auto;
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 1fr 4fr 1fr 1fr;
-`
-const MediaCanvas = styled.div`
-    grid-column: 2/2;
-    grid-row:2/2;
-    justify-self: center;
-`
-
-const AudioControl = styled.div`
-    grid-column: 2/2;
-    grid-row: 4/4;
-    justify-self: center;
-`
-const TimeBar = styled.div`
-    margin-top: 0.5em;
-    grid-column: 2/2;
-    grid-row:3/3;
-    background: #CBD7E8;
-    height: 10px;
-    width: 100%;
-`
-const TimeBarProgress = styled.div`
-    grid-column: 2/2;
-    grid-row:3/3;
-    background: #162C49;
-    height: 10px;
-    width: 0%;
-`
-const Timer = styled.div`
-    justify-self: center;
-    font-family: SVN;
-    font-size: large;
-`
