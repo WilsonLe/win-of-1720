@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import fileBHK from "assets/sounds/BAIHATKHOI-MASTERED.mp3";
 import mediaLogo from "assets/1720-logo.jpg";
@@ -9,16 +9,31 @@ import pauseButton from "assets/pause-button.jpg";
 let audioStream = new Audio(fileBHK)
 let audioTracker;
 
+function timeParser(ms) {
+    let sec = ms / 1000
+    let min = parseInt(sec / 60);
+    sec = parseInt(sec % 60);
+    if (sec < 10) sec = `0${sec}`
+    if (isNaN(sec)) sec = "00"
+    if (isNaN(min)) min = "0"
+    return `${min}:${sec}`
+}
 
 export default function BaiHatKhoi({ onClose, isFocus }) {
 
-    const [playtime, setPlaytime] = useState({time:0});
+    const [playtime, setPlaytime] = useState({ time: 0 });
+
+    useEffect(() => {
+        return () => {
+            stop()
+        }
+    }, [])
 
     const play = () => {
         audioStream.play();
         audioTracker = setInterval(() => {
-            setPlaytime({time:parseInt(audioStream.currentTime * 1000)})
-        }, 1000);
+            setPlaytime({ time: parseInt(audioStream.currentTime * 1000) })
+        }, 100);
     }
 
     const pause = () => {
@@ -30,7 +45,7 @@ export default function BaiHatKhoi({ onClose, isFocus }) {
         audioStream.pause();
         audioStream.currentTime = 0;
         clearInterval(audioTracker);
-        setPlaytime({time:0});
+        setPlaytime({ time: 0 });
     }
 
     return (
@@ -38,9 +53,15 @@ export default function BaiHatKhoi({ onClose, isFocus }) {
             <MediaCanvas>
                 <img src={mediaLogo} alt="1720 Logo" width="auto" height="150vh"></img>
             </MediaCanvas>
+
+            <Timer style={{ "gridColumn": "1/1", "gridRow": "3/3" }}>{timeParser(playtime.time)}</Timer>
+
             <TimeBar>
-                <TimeBarProgress style={{width: playtime.time/parseInt(audioStream.duration*10) + "%"}}></TimeBarProgress>
+                <TimeBarProgress style={{ width: playtime.time / parseInt(audioStream.duration * 10) + "%" }}></TimeBarProgress>
             </TimeBar>
+
+            <Timer style={{ "gridColumn": "3/3", "gridRow": "3/3" }}>{timeParser(parseInt(audioStream.duration * 1000))}</Timer>
+
             <AudioControl>
                 <img onClick={pause} src={pauseButton} alt="Pause" width="auto" height="40vh"></img>
                 <img onClick={play} src={playButton} alt="Play" width="auto" height="50vh"></img>
@@ -71,6 +92,7 @@ const AudioControl = styled.div`
     justify-self: center;
 `
 const TimeBar = styled.div`
+    margin-top: 0.5em;
     grid-column: 2/2;
     grid-row:3/3;
     background: #CBD7E8;
@@ -83,4 +105,9 @@ const TimeBarProgress = styled.div`
     background: #162C49;
     height: 10px;
     width: 0%;
+`
+const Timer = styled.div`
+    justify-self: center;
+    font-family: SVN;
+    font-size: large;
 `
