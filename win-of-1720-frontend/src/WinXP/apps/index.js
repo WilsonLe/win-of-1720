@@ -7,6 +7,7 @@ import Winamp from "./Winamp";
 import Paint from "./Paint";
 import clipK12 from "./clipK12";
 import BaiHatKhoi from "./BaiHatKhoi";
+import NNHQ from "./nnhq"
 import iePaper from "assets/windowsIcons/ie-paper.png";
 // import ie from 'assets/windowsIcons/ie.png';
 import mine from "assets/minesweeper/mine-icon.png";
@@ -20,7 +21,7 @@ import paintLarge from "assets/windowsIcons/680(32x32).png";
 import paint from "assets/windowsIcons/680(16x16).png";
 import sup from "assets/windowsIcons/sup(16x16).png";
 import bhk from "assets/windowsIcons/sup(16x16).png";
-
+import nnhq from "assets/windowsIcons/nnhq.png";
 const gen = () => {
   let id = -1;
   return () => {
@@ -193,6 +194,13 @@ export const defaultIconState = [
     component: Paint,
     isFocus: false,
   },
+  {
+    id: 8,
+    icon: nnhq,
+    title: "",
+    component: NNHQ,
+    isFocus: false,
+  }
 ];
 
 export const appSettings = {
@@ -357,6 +365,25 @@ export const appSettings = {
       title: "Bài hát khối.mp3",
     },
     component: BaiHatKhoi,
+    defaultSize: {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    },
+    defaultOffset: {
+      x: 0,
+      y: 0,
+    },
+    resizable: false,
+    minimized: false,
+    maximized: false,
+    multiInstance: false,
+  },
+  NNHQ: {
+    header: {
+      icon: nnhq,
+      title: "",
+    },
+    component: NNHQ,
     defaultSize: {
       width: window.innerWidth,
       height: window.innerHeight,
