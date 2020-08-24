@@ -19,8 +19,8 @@ import notepad from "assets/windowsIcons/327(16x16).png";
 import winamp from "assets/windowsIcons/winamp.png";
 import paintLarge from "assets/windowsIcons/680(32x32).png";
 import paint from "assets/windowsIcons/680(16x16).png";
-import sup from "assets/windowsIcons/sup(16x16).png";
-import bhk from "assets/windowsIcons/sup(16x16).png";
+import sup from "assets/windowsIcons/dak12.png";
+import bhk from "assets/windowsIcons/dak12.png";
 import nnhq from "assets/windowsIcons/nnhq.png";
 const gen = () => {
   let id = -1;
