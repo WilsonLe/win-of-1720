@@ -37,10 +37,10 @@ const genIndex = gen();
 
 export const defaultAppState = [
   {
-    component: BaiHatKhoi,
+    component: YB,
     header: {
-      title: "Bài hát khối.mp3",
-      icon: bhk,
+      title: "Yearbook",
+      icon: yb,
     },
     defaultSize: {
       width: 700,
@@ -56,6 +56,26 @@ export const defaultAppState = [
     id: genId(),
     zIndex: genIndex(),
   },
+  // {
+  //   component: BaiHatKhoi,
+  //   header: {
+  //     title: "Bài hát khối.mp3",
+  //     icon: bhk,
+  //   },
+  //   defaultSize: {
+  //     width: 700,
+  //     height: 500,
+  //   },
+  //   defaultOffset: {
+  //     x: 130,
+  //     y: 20,
+  //   },
+  //   resizable: false,
+  //   minimized: false,
+  //   maximized: true,
+  //   id: genId(),
+  //   zIndex: genIndex(),
+  // },
   // {
   //   component: BaiHatKhoi,
   //   header: {

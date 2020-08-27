@@ -10,7 +10,7 @@ export default function BaiHatKhoi({ onClose, isFocus }) {
 
     return (
         <div style={{height:"100%",width:"100%"}}>
-            <embed src="https://win-of-1720.now.sh/yearbook" width="100%" height="100%" type="application/pdf"></embed>
+            <embed src="/assets/Yearbook.pdf" width="100%" height="100%" type="application/pdf"></embed>
         </div>
     );
 }
