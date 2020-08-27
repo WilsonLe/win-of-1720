@@ -8,6 +8,7 @@ import Paint from "./Paint";
 import clipK12 from "./clipK12";
 import BaiHatKhoi from "./BaiHatKhoi";
 import NNHQ from "./nnhq"
+import YB from "./YB"
 import iePaper from "assets/windowsIcons/ie-paper.png";
 // import ie from 'assets/windowsIcons/ie.png';
 import mine from "assets/minesweeper/mine-icon.png";
@@ -22,6 +23,7 @@ import paint from "assets/windowsIcons/680(16x16).png";
 import sup from "assets/windowsIcons/dak12.png";
 import bhk from "assets/windowsIcons/dak12.png";
 import nnhq from "assets/windowsIcons/nnhq.png";
+import yb from "assets/windowsIcons/dak12.png";
 const gen = () => {
   let id = -1;
   return () => {
@@ -54,6 +56,26 @@ export const defaultAppState = [
     id: genId(),
     zIndex: genIndex(),
   },
+  // {
+  //   component: BaiHatKhoi,
+  //   header: {
+  //     title: "Bài hát khối.mp3",
+  //     icon: bhk,
+  //   },
+  //   defaultSize: {
+  //     width: 700,
+  //     height: 500,
+  //   },
+  //   defaultOffset: {
+  //     x: 130,
+  //     y: 20,
+  //   },
+  //   resizable: false,
+  //   minimized: false,
+  //   maximized: true,
+  //   id: genId(),
+  //   zIndex: genIndex(),
+  // },
   // {
   //   component: InternetExplorer,
   //   header: {
@@ -138,6 +160,13 @@ export const defaultAppState = [
 ];
 
 export const defaultIconState = [
+  {
+    id: 9,
+    icon: yb,
+    title: "Yearbook",
+    component: YB,
+    isFocus: false,
+  },
   {
     id: 7,
     icon: bhk,
@@ -384,6 +413,25 @@ export const appSettings = {
       title: "",
     },
     component: NNHQ,
+    defaultSize: {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    },
+    defaultOffset: {
+      x: 0,
+      y: 0,
+    },
+    resizable: false,
+    minimized: false,
+    maximized: false,
+    multiInstance: false,
+  },
+  Yb: {
+    header: {
+      icon: yb,
+      title: "",
+    },
+    component: YB,
     defaultSize: {
       width: window.innerWidth,
       height: window.innerHeight,
