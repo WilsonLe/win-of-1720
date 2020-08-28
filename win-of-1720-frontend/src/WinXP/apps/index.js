@@ -39,7 +39,7 @@ export const defaultAppState = [
   {
     component: YB,
     header: {
-      title: "Yearbook",
+      title: "Yearbook 1720.pdf",
       icon: yb,
     },
     defaultSize: {
@@ -183,7 +183,7 @@ export const defaultIconState = [
   {
     id: 9,
     icon: yb,
-    title: "Yearbook",
+    title: "Yearbook 1720.pdf",
     component: YB,
     isFocus: false,
   },
@@ -197,7 +197,7 @@ export const defaultIconState = [
   {
     id: 6,
     icon: sup,
-    title: "Clip Khối.exe",
+    title: "Clip Khối.mov",
     component: clipK12,
     isFocus: false,
   },
@@ -392,7 +392,7 @@ export const appSettings = {
   clipK12: {
     header: {
       icon: sup,
-      title: "Clip Khối.exe",
+      title: "Clip Khối.mov",
     },
     component: clipK12,
     defaultSize: {
@@ -449,7 +449,7 @@ export const appSettings = {
   Yb: {
     header: {
       icon: yb,
-      title: "",
+      title: "Yearbook 1720.pdf",
     },
     component: YB,
     defaultSize: {
