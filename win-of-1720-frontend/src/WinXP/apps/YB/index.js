@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import YB0 from "assets/yearbook/YB-0.jpg"
-import YB1 from "assets/yearbook/YB-1.jpg"
+
 import YB2 from "assets/yearbook/YB-2.jpg"
 import YB3 from "assets/yearbook/YB-3.jpg"
 import YB4 from "assets/yearbook/YB-4.jpg"
@@ -14,6 +14,7 @@ import YB9 from "assets/yearbook/YB-9.jpg"
 import YB10 from "assets/yearbook/YB-10.jpg"
 import YB11 from "assets/yearbook/YB-11.jpg"
 import YB12 from "assets/yearbook/YB-12.jpg"
+import YB135 from "assets/yearbook/YB-13.5.jpg"
 import YB13 from "assets/yearbook/YB-13.jpg"
 import YB14 from "assets/yearbook/YB-14.jpg"
 import YB15 from "assets/yearbook/YB-15.jpg"
@@ -39,7 +40,7 @@ import YB34 from "assets/yearbook/YB-34.jpg"
 import YB35 from "assets/yearbook/YB-35.jpg"
 import YB36 from "assets/yearbook/YB-36.jpg"
 import YB37 from "assets/yearbook/YB-37.jpg"
-import YB38 from "assets/yearbook/YB-38.jpg"
+
 import YB39 from "assets/yearbook/YB-39.jpg"
 import YB40 from "assets/yearbook/YB-40.jpg"
 import YB41 from "assets/yearbook/YB-41.jpg"
@@ -58,7 +59,6 @@ import YB53 from "assets/yearbook/YB-53.jpg"
 import YB54 from "assets/yearbook/YB-54.jpg"
 import YB55 from "assets/yearbook/YB-55.jpg"
 import YB56 from "assets/yearbook/YB-56.jpg"
-import YB57 from "assets/yearbook/YB-57.jpg"
 import YB58 from "assets/yearbook/YB-58.jpg"
 import YB59 from "assets/yearbook/YB-59.jpg"
 import YB60 from "assets/yearbook/YB-60.jpg"
@@ -72,13 +72,15 @@ import YB67 from "assets/yearbook/YB-67.jpg"
 import YB68 from "assets/yearbook/YB-68.jpg"
 import YB69 from "assets/yearbook/YB-69.jpg"
 import YB70 from "assets/yearbook/YB-70.jpg"
+import YB71 from "assets/yearbook/YB-71.jpg"
+import YB72 from "assets/yearbook/YB-72.jpg"
 
 export default ({ onClose, isFocus }) => {
 
     return (
         <Div>
         <img src={YB0} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
-<img src={YB1} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
+
 <img src={YB2} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
 <img src={YB3} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
 <img src={YB4} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
@@ -90,6 +92,7 @@ export default ({ onClose, isFocus }) => {
 <img src={YB10} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
 <img src={YB11} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
 <img src={YB12} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
+<img src={YB135} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
 <img src={YB13} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
 <img src={YB14} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
 <img src={YB15} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
@@ -115,7 +118,7 @@ export default ({ onClose, isFocus }) => {
 <img src={YB35} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
 <img src={YB36} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
 <img src={YB37} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
-<img src={YB38} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
+
 <img src={YB39} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
 <img src={YB40} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
 <img src={YB41} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
@@ -134,7 +137,6 @@ export default ({ onClose, isFocus }) => {
 <img src={YB54} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
 <img src={YB55} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
 <img src={YB56} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
-<img src={YB57} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
 <img src={YB58} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
 <img src={YB59} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
 <img src={YB60} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
@@ -148,6 +150,8 @@ export default ({ onClose, isFocus }) => {
 <img src={YB68} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
 <img src={YB69} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
 <img src={YB70} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
+<img src={YB71} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
+<img src={YB72} style={{width: "100%", display:"block", margin:"auto", pointerEvents:"none"}} />
         </Div>
     );
 }
