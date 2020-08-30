@@ -87,15 +87,23 @@ function Icon({
   );
 }
 
+
+
 const IconsContainer = styled.div`
+  width: 100%;
+  height: 100%
   position: absolute;
-  margin-top: 40px;
-  margin-left: 40px;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start; 
+
 `;
 
 const StyledIcon = styled(Icon)`
   width: 70px;
-  margin-bottom: 30px;
+  margin: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
