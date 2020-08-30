@@ -9,6 +9,7 @@ import clipK12 from "./clipK12";
 import BaiHatKhoi from "./BaiHatKhoi";
 import NNHQ from "./nnhq"
 import YB from "./YB"
+import MVK from "./MVK"
 import iePaper from "assets/windowsIcons/ie-paper.png";
 // import ie from 'assets/windowsIcons/ie.png';
 import mine from "assets/minesweeper/mine-icon.png";
@@ -24,6 +25,7 @@ import sup from "assets/windowsIcons/dak12.png";
 import bhk from "assets/windowsIcons/dak12.png";
 import nnhq from "assets/windowsIcons/nnhq.png";
 import yb from "assets/windowsIcons/dak12.png";
+import mvk from "assets/windowsIcons/dak12.png";
 const gen = () => {
   let id = -1;
   return () => {
@@ -37,7 +39,7 @@ const genIndex = gen();
 
 export const defaultAppState = [
   {
-    component: YB,
+    component: MVK,
     header: {
       title: "Yearbook 1720.pdf",
       icon: yb,
@@ -56,6 +58,26 @@ export const defaultAppState = [
     id: genId(),
     zIndex: genIndex(),
   },
+  // {
+  //   component: YB,
+  //   header: {
+  //     title: "Yearbook 1720.pdf",
+  //     icon: yb,
+  //   },
+  //   defaultSize: {
+  //     width: 700,
+  //     height: 500,
+  //   },
+  //   defaultOffset: {
+  //     x: 130,
+  //     y: 20,
+  //   },
+  //   resizable: false,
+  //   minimized: false,
+  //   maximized: true,
+  //   id: genId(),
+  //   zIndex: genIndex(),
+  // },
   // {
   //   component: BaiHatKhoi,
   //   header: {
@@ -180,6 +202,13 @@ export const defaultAppState = [
 ];
 
 export const defaultIconState = [
+  {
+    id: 10,
+    icon: mvk,
+    title: "Có bao giờ rời đi.mp4",
+    component: MVK,
+    isFocus: false,
+  },
   {
     id: 9,
     icon: yb,
@@ -465,6 +494,25 @@ export const appSettings = {
     maximized: false,
     multiInstance: false,
   },
+  MVK: {
+    header: {
+      icon: mvk,
+      title: "Có bao giờ rời đi.mp4",
+    },
+    component: MVK,
+    defaultSize: {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    },
+    defaultOffset: {
+      x: 0,
+      y: 0,
+    },
+    resizable: false,
+    minimized: false,
+    maximized: false,
+    multiInstance: false,
+  }
 };
 
 export { InternetExplorer, Minesweeper, ErrorBox, MyComputer, Notepad, Winamp };
