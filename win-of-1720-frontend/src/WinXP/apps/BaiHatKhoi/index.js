@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-export default function BaiHatKhoi({ onClose, isFocus }) {
+const BaiHatKhoi = ({ onClose, isFocus }) => {
 
     useEffect(() => {
         return () => {
@@ -16,3 +16,4 @@ export default function BaiHatKhoi({ onClose, isFocus }) {
         </div>
     );
 }
+export default BaiHatKhoi;

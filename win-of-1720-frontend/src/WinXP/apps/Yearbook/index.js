@@ -75,7 +75,7 @@ import YB70 from "assets/yearbook/YB-70.jpg"
 import YB71 from "assets/yearbook/YB-71.jpg"
 import YB72 from "assets/yearbook/YB-72.jpg"
 
-export default ({ onClose, isFocus }) => {
+const Yearbook = ({ onClose, isFocus }) => {
 
     return (
         <Div>
@@ -163,3 +163,4 @@ const Div = styled.div`
     overflow: scroll;
     align-content: center;
 `
+export default Yearbook;

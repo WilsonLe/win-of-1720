@@ -1,5 +1,5 @@
 import React from 'react'
-function Surprise( {onClose, isFocus}) {
+const ClipKhoi = ({onClose, isFocus}) => {
     return (
         <div
             style={{
@@ -9,7 +9,7 @@ function Surprise( {onClose, isFocus}) {
             }}
         >
             <iframe
-                src="https://www.youtube-nocookie.com/embed/3S86Q7koOOw?rel=0&amp;modestbranding=1"
+                src="https://www.youtube.com/embed/SbbNp293ZBQ?rel=0&amp;modestbranding=1;autoplay=1"
                 allow='autoplay'
                 allowFullScreen
                 title="Clip Khối 1720!"
@@ -33,4 +33,4 @@ function Surprise( {onClose, isFocus}) {
         </div>
     );
 }
-export default Surprise;
+export default ClipKhoi;

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-export default function NNHQ({ onClose, isFocus }) {
+const EasterEgg1 = ({ onClose, isFocus }) => {
 
     useEffect(() => {
         return () => {
@@ -31,3 +31,4 @@ export default function NNHQ({ onClose, isFocus }) {
         </div>
     );
 }
+export default EasterEgg1;

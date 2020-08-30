@@ -1,5 +1,5 @@
 import React from 'react'
-function MVK( {onClose, isFocus}) {
+const MVKhoi = ( {onClose, isFocus}) => {
     return (
         <div
             style={{
@@ -33,4 +33,4 @@ function MVK( {onClose, isFocus}) {
         </div>
     );
 }
-export default MVK;
+export default MVKhoi;
