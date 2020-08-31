@@ -9,7 +9,7 @@ const MVKhoi = ( {onClose, isFocus}) => {
             }}
         >
             <iframe
-                src="https://www.youtube-nocookie.com/embed/3S86Q7koOOw?rel=0&amp;modestbranding=1"
+                src="https://www.youtube.com/embed/H9hbHxP7w60?rel=0&amp;modestbranding=1;autoplay=1"
                 allow='autoplay'
                 allowFullScreen
                 title="Clip Khối 1720!"
