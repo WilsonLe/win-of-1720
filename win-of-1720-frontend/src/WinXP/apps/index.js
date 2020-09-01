@@ -49,7 +49,7 @@ export const defaultAppState = [
   {
     component: MVKhoi,
     header: {
-      title: "Yearbook 1720.pdf",
+      title: "Có bao giờ rời đi.mp4",
       icon: yearbook,
     },
     defaultSize: {
