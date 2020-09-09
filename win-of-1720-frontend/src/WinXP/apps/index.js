@@ -46,26 +46,26 @@ const genId = gen();
 const genIndex = gen();
 
 export const defaultAppState = [
-  {
-    component: MVKhoi,
-    header: {
-      title: "Có bao giờ rời đi.mp4",
-      icon: yearbook,
-    },
-    defaultSize: {
-      width: 700,
-      height: 500,
-    },
-    defaultOffset: {
-      x: 130,
-      y: 20,
-    },
-    resizable: false,
-    minimized: false,
-    maximized: true,
-    id: genId(),
-    zIndex: genIndex(),
-  },
+  // {
+  //   component: MVKhoi,
+  //   header: {
+  //     title: "Có bao giờ rời đi.mp4",
+  //     icon: yearbook,
+  //   },
+  //   defaultSize: {
+  //     width: 700,
+  //     height: 500,
+  //   },
+  //   defaultOffset: {
+  //     x: 130,
+  //     y: 20,
+  //   },
+  //   resizable: false,
+  //   minimized: false,
+  //   maximized: true,
+  //   id: genId(),
+  //   zIndex: genIndex(),
+  // },
   // {
   //   component: Yearbook,
   //   header: {
@@ -227,14 +227,14 @@ export const defaultIconState = [
   {
     id: 7,
     icon: bai_hat_khoi,
-    title: "Có bao giờ rời đi?.mp3",
+    title: "Có bao giờ rời đi.mp3",
     component: BaiHatKhoi,
     isFocus: false,
   },
   {
     id: 6,
     icon: clip_khoi,
-    title: "Clip Khối.mov",
+    title: "Clip Khối.mp4",
     component: ClipKhoi,
     isFocus: false,
   },
@@ -429,7 +429,7 @@ export const appSettings = {
   ClipKhoi: {
     header: {
       icon: clip_khoi,
-      title: "Clip Khối.mov",
+      title: "Clip Khối.mp4",
     },
     component: ClipKhoi,
     defaultSize: {
@@ -448,7 +448,7 @@ export const appSettings = {
   BaiHatKhoi: {
     header: {
       icon: bai_hat_khoi,
-      title: "Có bao giờ rời đi?.mp3",
+      title: "Có bao giờ rời đi.mp3",
     },
     component: BaiHatKhoi,
     defaultSize: {
