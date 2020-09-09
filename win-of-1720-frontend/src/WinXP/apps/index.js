@@ -227,14 +227,14 @@ export const defaultIconState = [
   {
     id: 7,
     icon: bai_hat_khoi,
-    title: "Có bao giờ rời đi?.mp3",
+    title: "Có bao giờ rời đi.mp3",
     component: BaiHatKhoi,
     isFocus: false,
   },
   {
     id: 6,
     icon: clip_khoi,
-    title: "Clip Khối.mov",
+    title: "Clip Khối.mp4",
     component: ClipKhoi,
     isFocus: false,
   },
@@ -429,7 +429,7 @@ export const appSettings = {
   ClipKhoi: {
     header: {
       icon: clip_khoi,
-      title: "Clip Khối.mov",
+      title: "Clip Khối.mp4",
     },
     component: ClipKhoi,
     defaultSize: {
@@ -448,7 +448,7 @@ export const appSettings = {
   BaiHatKhoi: {
     header: {
       icon: bai_hat_khoi,
-      title: "Có bao giờ rời đi?.mp3",
+      title: "Có bao giờ rời đi.mp3",
     },
     component: BaiHatKhoi,
     defaultSize: {
