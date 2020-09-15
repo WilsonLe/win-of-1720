@@ -1,20 +1,20 @@
-import React from 'react';
-import { createPortal } from 'react-dom';
-import styled from 'styled-components';
+import React from "react";
+import { createPortal } from "react-dom";
+import styled from "styled-components";
 
-import { POWER_STATE } from 'WinXP/constants';
-import windowsLogo from 'assets/windowsIcons/windows-off.png';
-import off from 'assets/windowsIcons/310(32x32).png';
-import lock from 'assets/windowsIcons/546(32x32).png';
-import restart from 'assets/windowsIcons/restart.ico';
-import switcher from 'assets/windowsIcons/290.png';
+import { POWER_STATE } from "WinXP/constants";
+import windowsLogo from "assets/windowsIcons/windows-off.png";
+import off from "assets/windowsIcons/310(32x32).png";
+import lock from "assets/windowsIcons/546(32x32).png";
+import restart from "assets/windowsIcons/restart.ico";
+import switcher from "assets/windowsIcons/290.png";
 
 function Modal(props) {
   return createPortal(
     <StyledContainer>
       <Menu {...props} />
     </StyledContainer>,
-    document.body,
+    document.body
   );
 }
 
@@ -43,7 +43,7 @@ const Menu = ({ mode, onClose, onClickButton }) => {
           <ButtonDisabled img={off} text="Stand By" />
           <Button img={off} text="Turn Off" onClick={onClickButton} />
           <Button
-            style={{ margin: '-3px 0 0px 0', width: '33px', height: '33px' }}
+            style={{ margin: "-3px 0 0px 0", width: "33px", height: "33px" }}
             img={restart}
             text="Restart"
             onClick={onClickButton}
@@ -56,7 +56,7 @@ const Menu = ({ mode, onClose, onClickButton }) => {
         <Button
           img={switcher}
           text="Switch User"
-          style={{ border: '1px solid #fff', borderRadius: '3px' }}
+          style={{ border: "1px solid #fff", borderRadius: "3px" }}
           onClick={onClickButton}
         />
         <Button img={lock} text="Log Off" onClick={onClickButton} />
@@ -102,7 +102,7 @@ const ButtonDisabled = ({ img, text }) => (
   </div>
 );
 const StyledContainer = styled(Container)`
-  font-family: Tahoma, 'Noto Sans', sans-serif;
+  font-family: Tahoma, "Noto Sans", sans-serif;
   position: fixed;
   top: 0;
   left: 0;
@@ -127,7 +127,7 @@ const StyledContainer = styled(Container)`
   }
   .header__text {
     font-size: 17px;
-    font-family: 'Noto Sans';
+    font-family: "Noto Sans";
     color: #fff;
     flex: 1;
   }
@@ -151,7 +151,7 @@ const StyledContainer = styled(Container)`
     padding: 0 30px;
     position: relative;
     &:before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       height: 2px;

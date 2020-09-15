@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import styled, { keyframes } from 'styled-components';
+import React, { useState, useEffect } from "react";
+import styled, { keyframes } from "styled-components";
 
-import risk from 'assets/windowsIcons/229(16x16).png';
+import risk from "assets/windowsIcons/229(16x16).png";
 
 function Balloon({ startAfter = 3000, duration = 15000 }) {
   const [show, setShow] = useState(true);
@@ -11,7 +11,7 @@ function Balloon({ startAfter = 3000, duration = 15000 }) {
     const fadeTimer = setTimeout(() => setShow(false), startAfter + duration);
     const closeTimer = setTimeout(
       () => setStart(false),
-      startAfter + duration + 1000,
+      startAfter + duration + 1000
     );
     return () => {
       clearTimeout(openTimer);
@@ -23,7 +23,11 @@ function Balloon({ startAfter = 3000, duration = 15000 }) {
     start && (
       <Div show={show}>
         <div className="balloon__container">
-          <button onClick={() => setShow(false)} className="balloon__close" aria-label="Close balloon"/>
+          <button
+            onClick={() => setShow(false)}
+            className="balloon__close"
+            aria-label="Close balloon"
+          />
           <div className="balloon__header">
             <img className="balloon__header__img" src={risk} alt="risk" />
             <span className="balloon__header__text">
@@ -82,7 +86,7 @@ const Div = styled.div`
     font-size: 11px;
     white-space: nowrap;
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       display: block;
       bottom: -19px;
@@ -94,7 +98,7 @@ const Div = styled.div`
       border-color: transparent black transparent transparent;
     }
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       display: block;
       bottom: -17px;
@@ -126,7 +130,7 @@ const Div = styled.div`
     border-radius: 3px;
     background-color: transparent;
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       left: 5px;
       top: 2px;
@@ -136,7 +140,7 @@ const Div = styled.div`
       background-color: rgba(170, 170, 170);
     }
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       left: 5px;
       top: 2px;

@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 function HeaderButtons({
   buttons,
@@ -22,8 +22,8 @@ function HeaderButtons({
       <button
         key="maximize"
         className={`header__button ${
-          maximized ? 'header__button--maximized' : 'header__button--maximize'
-        } ${resizable ? '' : 'header__button--disable'}`}
+          maximized ? "header__button--maximized" : "header__button--maximize"
+        } ${resizable ? "" : "header__button--disable"}`}
         onMouseDown={onMaximize}
       />
     ),
@@ -39,7 +39,7 @@ function HeaderButtons({
   return (
     <div className={className}>
       {buttons ? (
-        buttons.map(b => buttonElements[b])
+        buttons.map((b) => buttonElements[b])
       ) : (
         <>
           {buttonElements.minimize}
@@ -83,7 +83,7 @@ export default styled(HeaderButtons)`
       white 100%
     );
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       left: 4px;
       top: 13px;
@@ -103,7 +103,7 @@ export default styled(HeaderButtons)`
       white 100%
     );
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       display: block;
       left: 4px;
@@ -124,7 +124,7 @@ export default styled(HeaderButtons)`
       white 100%
     );
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       display: block;
       left: 7px;
@@ -134,7 +134,7 @@ export default styled(HeaderButtons)`
       width: 8px;
     }
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       display: block;
       left: 4px;
@@ -156,7 +156,7 @@ export default styled(HeaderButtons)`
       white 100%
     );
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       left: 9px;
       top: 2px;
@@ -166,7 +166,7 @@ export default styled(HeaderButtons)`
       background-color: white;
     }
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       left: 9px;
       top: 2px;

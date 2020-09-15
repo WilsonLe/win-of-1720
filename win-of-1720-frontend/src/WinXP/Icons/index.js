@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import styled from 'styled-components';
+import React, { useState, useRef, useEffect } from "react";
+import styled from "styled-components";
 
 function Icons({
   icons,
@@ -12,8 +12,8 @@ function Icons({
 }) {
   const [iconsRect, setIconsRect] = useState([]);
   function measure(rect) {
-    if (iconsRect.find(r => r.id === rect.id)) return;
-    setIconsRect(iconsRect => [...iconsRect, rect]);
+    if (iconsRect.find((r) => r.id === rect.id)) return;
+    setIconsRect((iconsRect) => [...iconsRect, rect]);
   }
   useEffect(() => {
     if (!selecting) return;
@@ -22,16 +22,16 @@ function Icons({
     const sw = Math.abs(selecting.x - mouse.docX);
     const sh = Math.abs(selecting.y - mouse.docY);
     const selectedIds = iconsRect
-      .filter(rect => {
+      .filter((rect) => {
         const { x, y, w, h } = rect;
         return x - sx < sw && sx - x < w && y - sy < sh && sy - y < h;
       })
-      .map(icon => icon.id);
+      .map((icon) => icon.id);
     setSelectedIcons(selectedIds);
   }, [iconsRect, setSelectedIcons, selecting, mouse.docX, mouse.docY]);
   return (
     <IconsContainer>
-      {icons.map(icon => (
+      {icons.map((icon) => (
         <StyledIcon
           key={icon.id}
           {...icon}
@@ -57,7 +57,7 @@ function Icon({
 }) {
   const ref = useRef(null);
   function _onMouseDown() {
-    onMouseDown(id,component);
+    onMouseDown(id, component);
   }
   function _onDoubleClick() {
     onDoubleClick(component);
@@ -87,8 +87,6 @@ function Icon({
   );
 }
 
-
-
 const IconsContainer = styled.div`
   width: 100%;
   height: 100%;
@@ -116,12 +114,12 @@ const StyledIcon = styled(Icon)`
     justify-content: center;
 
     &:before {
-      content: '';
+      content: "";
       display: block;
       flex-grow: 1;
     }
     &:after {
-      content: '';
+      content: "";
       display: block;
       flex-grow: 1;
     }
@@ -129,7 +127,7 @@ const StyledIcon = styled(Icon)`
   &__text {
     padding: 0 3px 2px;
     background-color: ${({ isFocus, displayFocus }) =>
-      isFocus && displayFocus ? '#0b61ff' : 'transparent'};
+      isFocus && displayFocus ? "#0b61ff" : "transparent"};
     text-align: center;
     flex-shrink: 1;
   }
@@ -137,7 +135,7 @@ const StyledIcon = styled(Icon)`
     width: 30px;
     height: 30px;
     filter: ${({ isFocus, displayFocus }) =>
-      isFocus && displayFocus ? 'drop-shadow(0 0 blue)' : ''};
+      isFocus && displayFocus ? "drop-shadow(0 0 blue)" : ""};
   }
   &__img {
     width: 30px;

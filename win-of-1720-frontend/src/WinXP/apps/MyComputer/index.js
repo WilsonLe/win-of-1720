@@ -1,36 +1,36 @@
-import React from 'react';
-import styled from 'styled-components';
-import ga from 'react-ga';
+import React from "react";
+import styled from "styled-components";
+import ga from "react-ga";
 
-import { WindowDropDowns } from 'components';
-import dropDownData from './dropDownData';
-import go from 'assets/windowsIcons/290.png';
-import search from 'assets/windowsIcons/299(32x32).png';
-import computer from 'assets/windowsIcons/676(16x16).png';
-import back from 'assets/windowsIcons/back.png';
-import forward from 'assets/windowsIcons/forward.png';
-import up from 'assets/windowsIcons/up.png';
-import viewInfo from 'assets/windowsIcons/view-info.ico';
-import remove from 'assets/windowsIcons/302(16x16).png';
-import control from 'assets/windowsIcons/300(16x16).png';
-import network from 'assets/windowsIcons/693(16x16).png';
-import document from 'assets/windowsIcons/308(16x16).png';
-import folderSmall from 'assets/windowsIcons/318(16x16).png';
-import menu from 'assets/windowsIcons/358(32x32).png';
-import folder from 'assets/windowsIcons/318(48x48).png';
-import folderOpen from 'assets/windowsIcons/337(32x32).png';
-import disk from 'assets/windowsIcons/334(48x48).png';
+import { WindowDropDowns } from "components";
+import dropDownData from "./dropDownData";
+import go from "assets/windowsIcons/290.png";
+import search from "assets/windowsIcons/299(32x32).png";
+import computer from "assets/windowsIcons/676(16x16).png";
+import back from "assets/windowsIcons/back.png";
+import forward from "assets/windowsIcons/forward.png";
+import up from "assets/windowsIcons/up.png";
+import viewInfo from "assets/windowsIcons/view-info.ico";
+import remove from "assets/windowsIcons/302(16x16).png";
+import control from "assets/windowsIcons/300(16x16).png";
+import network from "assets/windowsIcons/693(16x16).png";
+import document from "assets/windowsIcons/308(16x16).png";
+import folderSmall from "assets/windowsIcons/318(16x16).png";
+import menu from "assets/windowsIcons/358(32x32).png";
+import folder from "assets/windowsIcons/318(48x48).png";
+import folderOpen from "assets/windowsIcons/337(32x32).png";
+import disk from "assets/windowsIcons/334(48x48).png";
 // import cd from 'assets/windowsIcons/111(48x48).png';
-import dropdown from 'assets/windowsIcons/dropdown.png';
-import pullup from 'assets/windowsIcons/pullup.png';
-import logo from 'assets/windowsIcons/dak12.png';
+import dropdown from "assets/windowsIcons/dropdown.png";
+import pullup from "assets/windowsIcons/pullup.png";
+import logo from "assets/windowsIcons/dak12.png";
 // import mine from 'assets/minesweeper/mine-icon.png';
-import windows from 'assets/windowsIcons/windows.png';
+import windows from "assets/windowsIcons/windows.png";
 
 function MyComputer({ onClose }) {
   function onClickOptionItem(item) {
     switch (item) {
-      case 'Close':
+      case "Close":
         onClose();
         break;
       default:
@@ -367,7 +367,9 @@ function MyComputer({ onClose }) {
                     src={logo}
                     alt="control"
                   />
-                  <div className="com__content__right__card__text">Huan Doan Ngoc</div>
+                  <div className="com__content__right__card__text">
+                    Huan Doan Ngoc
+                  </div>
                 </ga.OutboundLink>
                 <ga.OutboundLink
                   eventLabel="https://wilsonle.me/"
@@ -494,7 +496,7 @@ const Div = styled.div`
     align-items: center;
     margin: 0 4px;
     &:before {
-      content: '';
+      content: "";
       display: block;
       border-width: 3px 3px 0;
       border-color: #000 transparent;
@@ -507,7 +509,7 @@ const Div = styled.div`
     align-items: center;
     margin: 0 1px 0 -1px;
     &:before {
-      content: '';
+      content: "";
       display: block;
       border-width: 3px 3px 0;
       border-color: #000 transparent;
@@ -703,7 +705,7 @@ const Div = styled.div`
     padding: 2px 0 3px 12px;
     position: relative;
     &:after {
-      content: '';
+      content: "";
       display: block;
       background: linear-gradient(to right, #70bfff 0, #fff 100%);
       position: absolute;

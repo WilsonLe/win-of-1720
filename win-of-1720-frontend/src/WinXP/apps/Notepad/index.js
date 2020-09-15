@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
 
-import { WindowDropDowns } from 'components';
-import dropDownData from './dropDownData';
+import { WindowDropDowns } from "components";
+import dropDownData from "./dropDownData";
 
 export default function Notepad({ onClose }) {
-  const [docText, setDocText] = useState('');
+  const [docText, setDocText] = useState("");
   const [wordWrap, setWordWrap] = useState(false);
 
   function onClickOptionItem(item) {
     switch (item) {
-      case 'Exit':
+      case "Exit":
         onClose();
         break;
-      case 'Word Wrap':
+      case "Word Wrap":
         setWordWrap(!wordWrap);
         break;
-      case 'Time/Date':
+      case "Time/Date":
         const date = new Date();
         setDocText(
-          `${docText}${date.toLocaleTimeString()} ${date.toLocaleDateString()}`,
+          `${docText}${date.toLocaleTimeString()} ${date.toLocaleDateString()}`
         );
         break;
       default:
@@ -51,7 +51,7 @@ export default function Notepad({ onClose }) {
       <StyledTextarea
         wordWrap={wordWrap}
         value={docText}
-        onChange={e => setDocText(e.target.value)}
+        onChange={(e) => setDocText(e.target.value)}
         onKeyDown={onTextAreaKeyDown}
         spellCheck={false}
       />
@@ -76,12 +76,13 @@ const Div = styled.div`
 const StyledTextarea = styled.textarea`
   flex: auto;
   outline: none;
-  font-family: 'Lucida Console', monospace;
+  font-family: "Lucida Console", monospace;
   font-size: 13px;
   line-height: 14px;
   resize: none;
   padding: 2px;
-  ${props => (props.wordWrap ? '' : 'white-space: nowrap; overflow-x: scroll;')}
+  ${(props) =>
+    props.wordWrap ? "" : "white-space: nowrap; overflow-x: scroll;"}
   overflow-y: scroll;
   border: 1px solid #96abff;
 `;

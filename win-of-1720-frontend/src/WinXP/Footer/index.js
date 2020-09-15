@@ -1,27 +1,27 @@
-import React, { useState, useEffect, useRef } from 'react';
-import styled from 'styled-components';
+import React, { useState, useEffect, useRef } from "react";
+import styled from "styled-components";
 
-import FooterMenu from './FooterMenu';
+import FooterMenu from "./FooterMenu";
 // import Balloon from 'components/Balloon';
-import startButton from 'assets/windowsIcons/start.png';
-import sound from 'assets/windowsIcons/690(16x16).png';
-import usb from 'assets/windowsIcons/394(16x16).png';
-import risk from 'assets/windowsIcons/229(16x16).png';
+import startButton from "assets/windowsIcons/start.png";
+import sound from "assets/windowsIcons/690(16x16).png";
+import usb from "assets/windowsIcons/394(16x16).png";
+import risk from "assets/windowsIcons/229(16x16).png";
 
 const getTime = () => {
   const date = new Date();
   let hour = date.getHours();
-  let hourPostFix = 'AM';
+  let hourPostFix = "AM";
   let min = date.getMinutes();
   if (hour >= 12) {
     hour -= 12;
-    hourPostFix = 'PM';
+    hourPostFix = "PM";
   }
   if (hour === 0) {
     hour = 12;
   }
   if (min < 10) {
-    min = '0' + min;
+    min = "0" + min;
   }
   return `${hour}:${min} ${hourPostFix}`;
 };
@@ -37,10 +37,10 @@ function Footer({
   const [menuOn, setMenuOn] = useState(false);
   const menu = useRef(null);
   function toggleMenu() {
-    setMenuOn(on => !on);
+    setMenuOn((on) => !on);
   }
   function _onMouseDown(e) {
-    if (e.target.closest('.footer__window')) return;
+    if (e.target.closest(".footer__window")) return;
     onMouseDown();
   }
   function _onClickMenuItem(name) {
@@ -60,8 +60,8 @@ function Footer({
     function onMouseDown(e) {
       if (!target.contains(e.target) && menuOn) setMenuOn(false);
     }
-    window.addEventListener('mousedown', onMouseDown);
-    return () => window.removeEventListener('mousedown', onMouseDown);
+    window.addEventListener("mousedown", onMouseDown);
+    return () => window.removeEventListener("mousedown", onMouseDown);
   }, [menuOn]);
 
   return (
@@ -77,7 +77,7 @@ function Footer({
           onMouseDown={toggleMenu}
         />
         {[...apps].map(
-          app =>
+          (app) =>
             !app.header.noFooterWindow && (
               <FooterWindow
                 key={app.id}
@@ -87,7 +87,7 @@ function Footer({
                 onMouseDown={onMouseDownApp}
                 isFocus={focusedAppId === app.id}
               />
-            ),
+            )
         )}
       </div>
 
@@ -111,7 +111,7 @@ function FooterWindow({ id, icon, title, onMouseDown, isFocus }) {
   return (
     <div
       onMouseDown={_onMouseDown}
-      className={`footer__window ${isFocus ? 'focus' : 'cover'}`}
+      className={`footer__window ${isFocus ? "focus" : "cover"}`}
     >
       <img className="footer__icon" src={icon} alt={title} />
       <div className="footer__text">{title}</div>
@@ -230,7 +230,7 @@ const Container = styled.footer`
   }
   .footer__window.cover:before {
     display: block;
-    content: '';
+    content: "";
     position: absolute;
     left: -2px;
     top: -2px;

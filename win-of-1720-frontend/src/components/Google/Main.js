@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import smile from './smile.svg';
+import React, { useState } from "react";
+import styled from "styled-components";
+import smile from "./smile.svg";
 
 function Main({ onSearch, className }) {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
   function onChange(e) {
     setValue(e.target.value);
   }
@@ -11,7 +11,7 @@ function Main({ onSearch, className }) {
     onSearch(value);
   }
   function onKeyDown(e) {
-    if (e.key !== 'Enter') return;
+    if (e.key !== "Enter") return;
     onSearch(value);
   }
   return (

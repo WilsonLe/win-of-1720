@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
 
-import find from './find.svg';
-import smile from './smile.svg';
+import find from "./find.svg";
+import smile from "./smile.svg";
 
 function Search({ className, goMain, onSearch, query }) {
   const [value, setValue] = useState(query);
-  const [tag, setTag] = useState('All');
+  const [tag, setTag] = useState("All");
   function onChange(e) {
     setValue(e.target.value);
   }
@@ -14,14 +14,14 @@ function Search({ className, goMain, onSearch, query }) {
     onSearch(value);
   }
   function onKeyDown(e) {
-    if (e.key !== 'Enter') return;
+    if (e.key !== "Enter") return;
     onSearch(value);
   }
   function renderTags() {
-    return 'All,Maps,Images,News,Videos,More'.split(',').map(tagName => (
+    return "All,Maps,Images,News,Videos,More".split(",").map((tagName) => (
       <div
         onClick={() => setTag(tagName)}
-        className={`tag ${tagName === tag ? 'active' : ''}`}
+        className={`tag ${tagName === tag ? "active" : ""}`}
         key={tagName}
       >
         {tagName}

@@ -1,37 +1,37 @@
-import React, { useEffect, useRef, useState } from 'react';
-import styled from 'styled-components';
+import React, { useEffect, useRef, useState } from "react";
+import styled from "styled-components";
 
-import { WindowDropDowns } from 'components';
-import dropDownData from './dropDownData';
-import dead from 'assets/minesweeper/dead.png';
-import smile from 'assets/minesweeper/smile.png';
-import win from 'assets/minesweeper/win.png';
-import ohh from 'assets/minesweeper/ohh.png';
-import empty from 'assets/empty.png';
-import open1 from 'assets/minesweeper/open1.png';
-import open2 from 'assets/minesweeper/open2.png';
-import open3 from 'assets/minesweeper/open3.png';
-import open4 from 'assets/minesweeper/open4.png';
-import open5 from 'assets/minesweeper/open5.png';
-import open6 from 'assets/minesweeper/open6.png';
-import open7 from 'assets/minesweeper/open7.png';
-import open8 from 'assets/minesweeper/open8.png';
-import flag from 'assets/minesweeper/flag.png';
-import mine from 'assets/minesweeper/mine-ceil.png';
-import mineDeath from 'assets/minesweeper/mine-death.png';
-import misFlagged from 'assets/minesweeper/misflagged.png';
-import question from 'assets/minesweeper/question.png';
-import digit0 from 'assets/minesweeper/digit0.png';
-import digit1 from 'assets/minesweeper/digit1.png';
-import digit2 from 'assets/minesweeper/digit2.png';
-import digit3 from 'assets/minesweeper/digit3.png';
-import digit4 from 'assets/minesweeper/digit4.png';
-import digit5 from 'assets/minesweeper/digit5.png';
-import digit6 from 'assets/minesweeper/digit6.png';
-import digit7 from 'assets/minesweeper/digit7.png';
-import digit8 from 'assets/minesweeper/digit8.png';
-import digit9 from 'assets/minesweeper/digit9.png';
-import digit_ from 'assets/minesweeper/digit-.png';
+import { WindowDropDowns } from "components";
+import dropDownData from "./dropDownData";
+import dead from "assets/minesweeper/dead.png";
+import smile from "assets/minesweeper/smile.png";
+import win from "assets/minesweeper/win.png";
+import ohh from "assets/minesweeper/ohh.png";
+import empty from "assets/empty.png";
+import open1 from "assets/minesweeper/open1.png";
+import open2 from "assets/minesweeper/open2.png";
+import open3 from "assets/minesweeper/open3.png";
+import open4 from "assets/minesweeper/open4.png";
+import open5 from "assets/minesweeper/open5.png";
+import open6 from "assets/minesweeper/open6.png";
+import open7 from "assets/minesweeper/open7.png";
+import open8 from "assets/minesweeper/open8.png";
+import flag from "assets/minesweeper/flag.png";
+import mine from "assets/minesweeper/mine-ceil.png";
+import mineDeath from "assets/minesweeper/mine-death.png";
+import misFlagged from "assets/minesweeper/misflagged.png";
+import question from "assets/minesweeper/question.png";
+import digit0 from "assets/minesweeper/digit0.png";
+import digit1 from "assets/minesweeper/digit1.png";
+import digit2 from "assets/minesweeper/digit2.png";
+import digit3 from "assets/minesweeper/digit3.png";
+import digit4 from "assets/minesweeper/digit4.png";
+import digit5 from "assets/minesweeper/digit5.png";
+import digit6 from "assets/minesweeper/digit6.png";
+import digit7 from "assets/minesweeper/digit7.png";
+import digit8 from "assets/minesweeper/digit8.png";
+import digit9 from "assets/minesweeper/digit9.png";
+import digit_ from "assets/minesweeper/digit-.png";
 
 const digits = [
   digit0,
@@ -50,35 +50,35 @@ function renderDigits(number) {
   if (number < 0) {
     const _number = -number % 100;
     if (_number === 0) {
-      numberStr = '00';
+      numberStr = "00";
     } else if (_number < 10) {
-      numberStr = '0' + _number;
+      numberStr = "0" + _number;
     } else {
       numberStr = String(_number);
     }
     return (
       <>
         <img src={digit_} alt="-" />
-        {numberStr.split('').map((n, i) => (
+        {numberStr.split("").map((n, i) => (
           <img src={digits[n]} key={i} alt={n} />
         ))}
       </>
     );
   }
 
-  numberStr = number < 999 ? String(number) : '999';
-  if (number < 10) numberStr = '00' + numberStr;
-  else if (number < 100) numberStr = '0' + numberStr;
+  numberStr = number < 999 ? String(number) : "999";
+  if (number < 10) numberStr = "00" + numberStr;
+  else if (number < 100) numberStr = "0" + numberStr;
   return numberStr
-    .split('')
+    .split("")
     .map((n, i) => <img key={i} src={digits[n]} alt={n} />);
 }
 
 function genDropDownData(difficulty) {
   let _Game = [...dropDownData.Game];
-  _Game[2].symbol = difficulty === 'Beginner' && 'check';
-  _Game[3].symbol = difficulty === 'Intermediate' && 'check';
-  _Game[4].symbol = difficulty === 'Expert' && 'check';
+  _Game[2].symbol = difficulty === "Beginner" && "check";
+  _Game[3].symbol = difficulty === "Intermediate" && "check";
+  _Game[4].symbol = difficulty === "Expert" && "check";
   return { Game: _Game, Help: dropDownData.Help };
 }
 
@@ -99,20 +99,21 @@ function MineSweeperView({
 }) {
   const face = useRef(null);
   const [mouseDownContent, setMouseDownContent] = useState(false);
-  const [openBehavior, setOpenBehavior] = useState({ index: -1, behavior: '' });
+  const [openBehavior, setOpenBehavior] = useState({ index: -1, behavior: "" });
   function remainMines() {
     return (
       mines -
-      ceils.filter(ceil => ceil.state === 'flag' || ceil.state === 'misflagged')
-        .length
+      ceils.filter(
+        (ceil) => ceil.state === "flag" || ceil.state === "misflagged"
+      ).length
     );
   }
   function statusFace() {
     if (mouseDownContent) return <img alt="ohh" src={ohh} />;
     switch (status) {
-      case 'died':
+      case "died":
         return <img alt="dead" src={dead} />;
-      case 'won':
+      case "won":
         return <img alt="win" src={win} />;
       default:
         return <img alt="smile" src={smile} />;
@@ -122,8 +123,8 @@ function MineSweeperView({
     if (e.button !== 0) return;
     if (
       face.current.contains(e.target) ||
-      status === 'won' ||
-      status === 'died'
+      status === "won" ||
+      status === "died"
     )
       return;
     setMouseDownContent(true);
@@ -131,9 +132,9 @@ function MineSweeperView({
   useEffect(() => {
     const { index, behavior } = openBehavior;
     switch (behavior) {
-      case 'single':
+      case "single":
         return openingCeil(index);
-      case 'multi':
+      case "multi":
         return openingCeils(index);
       default:
         openingCeil(-1);
@@ -143,26 +144,26 @@ function MineSweeperView({
   function onMouseDownCeils(e) {
     const index = Array.prototype.indexOf.call(
       e.currentTarget.children,
-      e.target.closest('.mine__ceil'),
+      e.target.closest(".mine__ceil")
     );
     if (e.button === 2 && e.buttons === 2 && index !== -1) {
       changeCeilState(index);
     } else if (e.button === 0 && e.buttons === 1) {
       setOpenBehavior({
         index,
-        behavior: 'single',
+        behavior: "single",
       });
     } else if (e.buttons === 3) {
       setOpenBehavior({
         index,
-        behavior: 'multi',
+        behavior: "multi",
       });
     }
   }
   function onMouseOverCeils(e) {
     const index = Array.prototype.indexOf.call(
       e.currentTarget.children,
-      e.target.closest('.mine__ceil'),
+      e.target.closest(".mine__ceil")
     );
     setOpenBehavior({
       index,
@@ -172,46 +173,46 @@ function MineSweeperView({
   function onMouseUpCeils() {
     const { behavior, index } = openBehavior;
     if (index === -1) return;
-    if (behavior === 'single') {
+    if (behavior === "single") {
       openCeil(index);
-    } else if (behavior === 'multi') {
+    } else if (behavior === "multi") {
       openCeils(index);
     }
   }
   function onClickOptionItem(item) {
     switch (item) {
-      case 'Exit':
+      case "Exit":
         onClose();
         break;
-      case 'Beginner':
-      case 'Intermediate':
-      case 'Expert':
+      case "Beginner":
+      case "Intermediate":
+      case "Expert":
         onReset(item);
         break;
-      case 'New':
+      case "New":
         onReset();
         break;
       default:
     }
   }
   useEffect(() => {
-    window.addEventListener('mouseup', onMouseUp);
+    window.addEventListener("mouseup", onMouseUp);
     return () => {
-      window.removeEventListener('mouseup', onMouseUp);
+      window.removeEventListener("mouseup", onMouseUp);
     };
   }, []);
   function onMouseUp(e) {
-    setOpenBehavior({ index: -1, behavior: '' });
+    setOpenBehavior({ index: -1, behavior: "" });
     setMouseDownContent(false);
   }
   useEffect(() => {
-    window.addEventListener('mouseup', onMouseUp);
+    window.addEventListener("mouseup", onMouseUp);
     return () => {
-      window.removeEventListener('mouseup', onMouseUp);
+      window.removeEventListener("mouseup", onMouseUp);
     };
   }, []);
   return (
-    <div className={className} onContextMenu={e => e.preventDefault()}>
+    <div className={className} onContextMenu={(e) => e.preventDefault()}>
       <div className="mine__options">
         <WindowDropDowns
           items={genDropDownData(difficulty)}
@@ -250,17 +251,17 @@ function Ceils({ ceils }) {
   function renderContent(ceil) {
     const { state, minesAround, opening } = ceil;
     switch (state) {
-      case 'open':
+      case "open":
         return <MinesAround mines={minesAround} />;
-      case 'flag':
+      case "flag":
         return <Flag />;
-      case 'misflagged':
+      case "misflagged":
         return <MisFlagged />;
-      case 'mine':
+      case "mine":
         return <Mine />;
-      case 'die':
+      case "die":
         return <Die />;
-      case 'unknown':
+      case "unknown":
         return opening ? <QuestionOpen /> : <Question />;
       default:
         return opening ? <CeilBackgroundOpen /> : <CeilBackgroundCover />;

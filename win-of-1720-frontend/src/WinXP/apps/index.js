@@ -8,10 +8,9 @@ import Winamp from "./Winamp";
 import Paint from "./Paint";
 import ClipKhoi from "./ClipKhoi";
 import BaiHatKhoi from "./BaiHatKhoi";
-import EasterEgg1 from "./EasterEgg1"
-import Yearbook from "./Yearbook"
-import MVKhoi from "./MVKhoi"
-
+import EasterEgg1 from "./EasterEgg1";
+import Yearbook from "./Yearbook";
+import MVKhoi from "./MVKhoi";
 
 //import icons
 import iePaper from "assets/windowsIcons/ie-paper.png";
@@ -283,7 +282,7 @@ export const defaultIconState = [
     title: "",
     component: EasterEgg1,
     isFocus: false,
-  }
+  },
 ];
 
 export const appSettings = {
@@ -517,7 +516,7 @@ export const appSettings = {
     minimized: false,
     maximized: false,
     multiInstance: false,
-  }
+  },
 };
 
 export { InternetExplorer, Minesweeper, ErrorBox, MyComputer, Notepad, Winamp };

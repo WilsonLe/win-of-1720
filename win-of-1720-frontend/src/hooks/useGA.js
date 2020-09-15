@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import ga from 'react-ga';
+import { useEffect } from "react";
+import ga from "react-ga";
 
 function useGA(id, route) {
   useEffect(() => {

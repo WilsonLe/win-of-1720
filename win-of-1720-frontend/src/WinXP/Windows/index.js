@@ -1,9 +1,9 @@
-import React, { useRef, memo } from 'react';
-import useWindowSize from 'react-use/lib/useWindowSize';
-import styled from 'styled-components';
+import React, { useRef, memo } from "react";
+import useWindowSize from "react-use/lib/useWindowSize";
+import styled from "styled-components";
 
-import { useElementResize } from 'hooks';
-import HeaderButtons from './HeaderButtons';
+import { useElementResize } from "hooks";
+import HeaderButtons from "./HeaderButtons";
 
 function Windows({
   apps,
@@ -14,8 +14,8 @@ function Windows({
   focusedAppId,
 }) {
   return (
-    <div style={{ position: 'relative', zIndex: 0 }}>
-      {apps.map(app => (
+    <div style={{ position: "relative", zIndex: 0 }}>
+      {apps.map((app) => (
         <StyledWindow
           show={!app.minimized}
           key={app.id}
@@ -32,7 +32,7 @@ function Windows({
   );
 }
 
-const Window = memo(function({
+const Window = memo(function ({
   injectProps,
   id,
   onMouseDown,
@@ -96,8 +96,8 @@ const Window = memo(function({
       onMouseDown={_onMouseDown}
       style={{
         transform: `translate(${x}px,${y}px)`,
-        width: width ? `${width}px` : 'auto',
-        height: height ? `${height}px` : 'auto',
+        width: width ? `${width}px` : "auto",
+        height: height ? `${height}px` : "auto",
         zIndex,
       }}
     >
@@ -132,19 +132,19 @@ const Window = memo(function({
 });
 
 const StyledWindow = styled(Window)`
-  display: ${({ show }) => (show ? 'flex' : 'none')};
+  display: ${({ show }) => (show ? "flex" : "none")};
   position: absolute;
   padding: 3px;
   padding: ${({ header }) => (header.invisible ? 0 : 3)}px;
-  background-color: ${({ isFocus }) => (isFocus ? '#0831d9' : '#6582f5')};
+  background-color: ${({ isFocus }) => (isFocus ? "#0831d9" : "#6582f5")};
   flex-direction: column;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   .header__bg {
     background: ${({ isFocus }) =>
       isFocus
-        ? 'linear-gradient(to bottom,#0058ee 0%,#3593ff 4%,#288eff 6%,#127dff 8%,#036ffc 10%,#0262ee 14%,#0057e5 20%,#0054e3 24%,#0055eb 56%,#005bf5 66%,#026afe 76%,#0062ef 86%,#0052d6 92%,#0040ab 94%,#003092 100%)'
-        : 'linear-gradient(to bottom, #7697e7 0%,#7e9ee3 3%,#94afe8 6%,#97b4e9 8%,#82a5e4 14%,#7c9fe2 17%,#7996de 25%,#7b99e1 56%,#82a9e9 81%,#80a5e7 89%,#7b96e1 94%,#7a93df 97%,#abbae3 100%)'};
+        ? "linear-gradient(to bottom,#0058ee 0%,#3593ff 4%,#288eff 6%,#127dff 8%,#036ffc 10%,#0262ee 14%,#0057e5 20%,#0054e3 24%,#0055eb 56%,#005bf5 66%,#026afe 76%,#0062ef 86%,#0052d6 92%,#0040ab 94%,#003092 100%)"
+        : "linear-gradient(to bottom, #7697e7 0%,#7e9ee3 3%,#94afe8 6%,#97b4e9 8%,#82a5e4 14%,#7c9fe2 17%,#7996de 25%,#7b99e1 56%,#82a9e9 81%,#80a5e7 89%,#7b96e1 94%,#7a93df 97%,#abbae3 100%)"};
     position: absolute;
     left: 0;
     top: 0;
@@ -156,7 +156,7 @@ const StyledWindow = styled(Window)`
     overflow: hidden;
   }
   .header__bg:before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     left: 0;
@@ -167,7 +167,7 @@ const StyledWindow = styled(Window)`
     width: 15px;
   }
   .header__bg:after {
-    content: '';
+    content: "";
     opacity: ${({ isFocus }) => (isFocus ? 1 : 0.4)};
     display: block;
     position: absolute;
@@ -178,12 +178,12 @@ const StyledWindow = styled(Window)`
     width: 15px;
   }
   .app__header {
-    display: ${({ header }) => (header.invisible ? 'none' : 'flex')};
+    display: ${({ header }) => (header.invisible ? "none" : "flex")};
     height: 25px;
     line-height: 25px;
     font-weight: 700;
     font-size: 12px;
-    font-family: 'Noto Sans';
+    font-family: "Noto Sans";
     text-shadow: 1px 1px #000;
     color: white;
     position: absolute;

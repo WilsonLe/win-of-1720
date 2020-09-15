@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
-import Webamp from 'webamp';
-import { initialTracks } from './config';
+import React, { useEffect, useRef } from "react";
+import Webamp from "webamp";
+import { initialTracks } from "./config";
 
 function Winamp({ onClose, onMinimize }) {
   const ref = useRef(null);
@@ -14,7 +14,7 @@ function Winamp({ onClose, onMinimize }) {
       initialTracks,
     });
     webamp.current.renderWhenReady(target).then(() => {
-      target.appendChild(document.querySelector('#webamp'));
+      target.appendChild(document.querySelector("#webamp"));
     });
     return () => {
       webamp.current.dispose();
@@ -29,7 +29,7 @@ function Winamp({ onClose, onMinimize }) {
   });
   return (
     <div
-      style={{ position: 'fixed', left: 0, top: 0, right: 0, bottom: 0 }}
+      style={{ position: "fixed", left: 0, top: 0, right: 0, bottom: 0 }}
       ref={ref}
     />
   );

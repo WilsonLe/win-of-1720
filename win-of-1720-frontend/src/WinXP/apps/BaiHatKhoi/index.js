@@ -1,7 +1,6 @@
 import React from "react";
 
 const BaiHatKhoi = ({ onClose, isFocus }) => {
-
   return (
     <div style={{ background: "white", height: "100%", width: "auto" }}>
       <iframe

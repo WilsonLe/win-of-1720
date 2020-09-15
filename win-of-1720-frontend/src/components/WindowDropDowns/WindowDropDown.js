@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
 
-import iePaper from 'assets/windowsIcons/ie-paper.png';
-import ieBook from 'assets/windowsIcons/ie-book.png';
-import check from 'assets/windowsIcons/checked.png';
-import folder from 'assets/windowsIcons/folder.png';
+import iePaper from "assets/windowsIcons/ie-paper.png";
+import ieBook from "assets/windowsIcons/ie-book.png";
+import check from "assets/windowsIcons/checked.png";
+import folder from "assets/windowsIcons/folder.png";
 
 export function WindowDropDown({ items, position = {}, onClick }) {
-  const [option, setOption] = useState('');
+  const [option, setOption] = useState("");
   return (
     <Div {...position}>
       <div className="drop-down__menu">
         {items.map((item, index) => {
           switch (item.type) {
-            case 'item':
+            case "item":
               return (
                 <div
                   key={item.text}
-                  className={`drop-down__row${item.disable ? '--disable' : ''}`}
+                  className={`drop-down__row${item.disable ? "--disable" : ""}`}
                   onMouseEnter={() => setOption(item.text)}
                   onClick={() => onClick(item.text)}
                 >
@@ -26,17 +26,17 @@ export function WindowDropDown({ items, position = {}, onClick }) {
                   </div>
                   <div className="drop-down__text">{item.text}</div>
                   <span className="drop-down__hot-key">
-                    {item.hotkey || ''}
+                    {item.hotkey || ""}
                   </span>
                   <div className="drop-down__arrow--disable" />
                 </div>
               );
-            case 'menu':
+            case "menu":
               return (
                 <div
                   key={item.text}
                   className={`drop-down__row${
-                    option === item.text ? '--active' : ''
+                    option === item.text ? "--active" : ""
                   }`}
                   onMouseEnter={() => setOption(item.text)}
                 >
@@ -45,10 +45,10 @@ export function WindowDropDown({ items, position = {}, onClick }) {
                   </div>
                   <div className="drop-down__text">{item.text}</div>
                   <span className="drop-down__hot-key">
-                    {item.hotkey || ''}
+                    {item.hotkey || ""}
                   </span>
                   <div className="drop-down__arrow" />
-                  <div style={{ position: 'relative' }}>
+                  <div style={{ position: "relative" }}>
                     {option === item.text && (
                       <WindowDropDown
                         position={item.position}
@@ -59,7 +59,7 @@ export function WindowDropDown({ items, position = {}, onClick }) {
                   </div>
                 </div>
               );
-            case 'separator':
+            case "separator":
               return <div key={index} className="drop-down__separator" />;
             default:
               return null;
@@ -72,22 +72,22 @@ export function WindowDropDown({ items, position = {}, onClick }) {
 
 function RowSymbol({ type }) {
   switch (type) {
-    case 'ie-paper':
+    case "ie-paper":
       return <img className="drop-down__icon" src={iePaper} alt="" />;
-    case 'ie-book':
+    case "ie-book":
       return <img className="drop-down__icon" src={ieBook} alt="" />;
-    case 'folder':
+    case "folder":
       return <img className="drop-down__icon" src={folder} alt="" />;
-    case 'check':
+    case "check":
       return <img src={check} alt="" />;
-    case 'circle':
+    case "circle":
       return (
         <div
           style={{
-            width: '6px',
-            height: '6px',
-            borderRadius: '50%',
-            backgroundColor: '#000',
+            width: "6px",
+            height: "6px",
+            borderRadius: "50%",
+            backgroundColor: "#000",
           }}
         />
       );
@@ -97,10 +97,10 @@ function RowSymbol({ type }) {
 }
 
 const Div = styled.div`
-  left: ${({ left }) => (left ? left : 'initial')};
-  top: ${({ top }) => (top ? top : 'initial')};
-  right: ${({ right }) => (right ? right : 'initial')};
-  bottom: ${({ bottom }) => (bottom ? bottom : 'initial')};
+  left: ${({ left }) => (left ? left : "initial")};
+  top: ${({ top }) => (top ? top : "initial")};
+  right: ${({ right }) => (right ? right : "initial")};
+  bottom: ${({ bottom }) => (bottom ? bottom : "initial")};
   position: absolute;
   display: flex;
   font-size: 11px;
@@ -196,7 +196,7 @@ const Div = styled.div`
       border-style: solid;
       border-width: 3px 0 3px 3px;
       border-color: transparent transparent transparent #000;
-      content: '';
+      content: "";
       display: block;
     }
   }

@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
-import styled from 'styled-components';
+import React, { useEffect } from "react";
+import styled from "styled-components";
 
-import errorSoundSrc from 'assets/sounds/error.wav';
-import error from 'assets/windowsIcons/897(32x32).png';
+import errorSoundSrc from "assets/sounds/error.wav";
+import error from "assets/windowsIcons/897(32x32).png";
 
 function lineBreak(str) {
-  return str.split('\n').map((s, i) => (
+  return str.split("\n").map((s, i) => (
     <p key={i} className="error__message">
       {s}
     </p>

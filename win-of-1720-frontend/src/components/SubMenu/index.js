@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
 
 function SubMenu({ className, data, style, onClick }) {
   const [hoverIndex, setHoverIndex] = useState(-1);
@@ -28,7 +28,7 @@ const SubMenuItem = ({ index, item, className, hover, onHover, onClick }) => {
     onClick(item.text);
   }
   switch (item.type) {
-    case 'item':
+    case "item":
       return (
         <div
           onClick={_onClick}
@@ -39,13 +39,13 @@ const SubMenuItem = ({ index, item, className, hover, onHover, onClick }) => {
           <div className={`${className}-text`}>{item.text}</div>
         </div>
       );
-    case 'separator':
+    case "separator":
       return <div className={`${className}-separator`} />;
-    case 'menu':
+    case "menu":
       return (
         <div
           onMouseEnter={_onMouseOver}
-          className={`${className}-item ${hover ? 'hover' : ''}`}
+          className={`${className}-item ${hover ? "hover" : ""}`}
         >
           <img className={`${className}-img`} src={item.icon} alt="" />
           <div className={`${className}-text`}>{item.text}</div>
@@ -68,8 +68,8 @@ const SubMenuItem = ({ index, item, className, hover, onHover, onClick }) => {
 const StyledSubMenu = styled(SubMenu)`
   position: absolute;
   z-index: 1;
-  left: ${({ left }) => left || '100%'};
-  bottom: ${({ bottom }) => bottom || '-1px'};
+  left: ${({ left }) => left || "100%"};
+  bottom: ${({ bottom }) => bottom || "-1px"};
   background-color: white;
   padding-left: 1px;
   box-shadow: inset 0 0 0 1px #72ade9, 2px 3px 3px rgb(0, 0, 0, 0.5);
@@ -126,7 +126,7 @@ const StyledSubMenu = styled(SubMenu)`
     &:before {
       top: 9px;
       right: 6px;
-      content: '';
+      content: "";
       display: block;
       border: 4px solid transparent;
       border-right: 0;
