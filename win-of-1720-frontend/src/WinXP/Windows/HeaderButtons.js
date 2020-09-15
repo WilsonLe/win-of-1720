@@ -15,7 +15,7 @@ function HeaderButtons({
       <button
         key="minimize"
         className="header__button header__button--minimize"
-        onMouseUp={onMinimize}
+        onMouseDown={onMinimize}
       />
     ),
     maximize: (
@@ -24,14 +24,14 @@ function HeaderButtons({
         className={`header__button ${
           maximized ? 'header__button--maximized' : 'header__button--maximize'
         } ${resizable ? '' : 'header__button--disable'}`}
-        onMouseUp={onMaximize}
+        onMouseDown={onMaximize}
       />
     ),
     close: (
       <button
         key="button"
         className="header__button header__button--close"
-        onMouseUp={onClose}
+        onMouseDown={onClose}
       />
     ),
   };

@@ -91,14 +91,13 @@ function Icon({
 
 const IconsContainer = styled.div`
   width: 100%;
-  height: 100%
+  height: 100%;
   position: absolute;
-  display:flex;
+  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-content: flex-start; 
-
+  align-content: flex-start;
 `;
 
 const StyledIcon = styled(Icon)`
