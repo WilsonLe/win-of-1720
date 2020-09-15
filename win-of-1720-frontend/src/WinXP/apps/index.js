@@ -1,3 +1,4 @@
+//import components
 import InternetExplorer from "./InternetExplorer";
 import Minesweeper from "./Minesweeper";
 import ErrorBox from "./ErrorBox";
@@ -5,9 +6,14 @@ import MyComputer from "./MyComputer";
 import Notepad from "./Notepad";
 import Winamp from "./Winamp";
 import Paint from "./Paint";
-import clipK12 from "./clipK12";
+import ClipKhoi from "./ClipKhoi";
 import BaiHatKhoi from "./BaiHatKhoi";
-import NNHQ from "./nnhq"
+import EasterEgg1 from "./EasterEgg1"
+import Yearbook from "./Yearbook"
+import MVKhoi from "./MVKhoi"
+
+
+//import icons
 import iePaper from "assets/windowsIcons/ie-paper.png";
 // import ie from 'assets/windowsIcons/ie.png';
 import mine from "assets/minesweeper/mine-icon.png";
@@ -19,9 +25,14 @@ import notepad from "assets/windowsIcons/327(16x16).png";
 import winamp from "assets/windowsIcons/winamp.png";
 import paintLarge from "assets/windowsIcons/680(32x32).png";
 import paint from "assets/windowsIcons/680(16x16).png";
-import sup from "assets/windowsIcons/dak12.png";
-import bhk from "assets/windowsIcons/dak12.png";
-import nnhq from "assets/windowsIcons/nnhq.png";
+import clip_khoi from "assets/windowsIcons/dak12.png";
+import bai_hat_khoi from "assets/windowsIcons/dak12.png";
+import easter_egg_1 from "assets/windowsIcons/easter_egg_1.png";
+import yearbook from "assets/windowsIcons/dak12.png";
+import mv_khoi from "assets/windowsIcons/dak12.png";
+
+
+
 const gen = () => {
   let id = -1;
   return () => {
@@ -30,30 +41,91 @@ const gen = () => {
   };
 };
 
+
 const genId = gen();
 const genIndex = gen();
 
 export const defaultAppState = [
-  {
-    component: BaiHatKhoi,
-    header: {
-      title: "Bài hát khối.mp3",
-      icon: bhk,
-    },
-    defaultSize: {
-      width: 700,
-      height: 500,
-    },
-    defaultOffset: {
-      x: 130,
-      y: 20,
-    },
-    resizable: false,
-    minimized: false,
-    maximized: true,
-    id: genId(),
-    zIndex: genIndex(),
-  },
+  // {
+  //   component: MVKhoi,
+  //   header: {
+  //     title: "Có bao giờ rời đi.mp4",
+  //     icon: yearbook,
+  //   },
+  //   defaultSize: {
+  //     width: 700,
+  //     height: 500,
+  //   },
+  //   defaultOffset: {
+  //     x: 130,
+  //     y: 20,
+  //   },
+  //   resizable: false,
+  //   minimized: false,
+  //   maximized: true,
+  //   id: genId(),
+  //   zIndex: genIndex(),
+  // },
+  // {
+  //   component: Yearbook,
+  //   header: {
+  //     title: "Yearbook 1720.pdf",
+  //     icon: yearbook,
+  //   },
+  //   defaultSize: {
+  //     width: 700,
+  //     height: 500,
+  //   },
+  //   defaultOffset: {
+  //     x: 130,
+  //     y: 20,
+  //   },
+  //   resizable: false,
+  //   minimized: false,
+  //   maximized: true,
+  //   id: genId(),
+  //   zIndex: genIndex(),
+  // },
+  // {
+  //   component: BaiHatKhoi,
+  //   header: {
+  //     title: "Có bao giờ rời đi?.mp3",
+  //     icon: bai_hat_khoi,
+  //   },
+  //   defaultSize: {
+  //     width: 700,
+  //     height: 500,
+  //   },
+  //   defaultOffset: {
+  //     x: 130,
+  //     y: 20,
+  //   },
+  //   resizable: false,
+  //   minimized: false,
+  //   maximized: true,
+  //   id: genId(),
+  //   zIndex: genIndex(),
+  // },
+  // {
+  //   component: BaiHatKhoi,
+  //   header: {
+  //     title: "Có bao giờ rời đi?.mp3",
+  //     icon: bai_hat_khoi,
+  //   },
+  //   defaultSize: {
+  //     width: 700,
+  //     height: 500,
+  //   },
+  //   defaultOffset: {
+  //     x: 130,
+  //     y: 20,
+  //   },
+  //   resizable: false,
+  //   minimized: false,
+  //   maximized: true,
+  //   id: genId(),
+  //   zIndex: genIndex(),
+  // },
   // {
   //   component: InternetExplorer,
   //   header: {
@@ -139,17 +211,31 @@ export const defaultAppState = [
 
 export const defaultIconState = [
   {
+    id: 10,
+    icon: mv_khoi,
+    title: "Có bao giờ rời đi.mp4",
+    component: MVKhoi,
+    isFocus: false,
+  },
+  {
+    id: 9,
+    icon: yearbook,
+    title: "Yearbook 1720.pdf",
+    component: Yearbook,
+    isFocus: false,
+  },
+  {
     id: 7,
-    icon: bhk,
-    title: "Bài hát khối.mp3",
+    icon: bai_hat_khoi,
+    title: "Có bao giờ rời đi.mp3",
     component: BaiHatKhoi,
     isFocus: false,
   },
   {
     id: 6,
-    icon: sup,
-    title: "Clip Khối.exe",
-    component: clipK12,
+    icon: clip_khoi,
+    title: "Clip Khối.mp4",
+    component: ClipKhoi,
     isFocus: false,
   },
   // {
@@ -196,9 +282,9 @@ export const defaultIconState = [
   },
   {
     id: 8,
-    icon: nnhq,
+    icon: easter_egg_1,
     title: "",
-    component: NNHQ,
+    component: EasterEgg1,
     isFocus: false,
   }
 ];
@@ -340,12 +426,12 @@ export const appSettings = {
     maximized: window.innerWidth < 800,
     multiInstance: true,
   },
-  clipK12: {
+  ClipKhoi: {
     header: {
-      icon: sup,
-      title: "Clip Khối.exe",
+      icon: clip_khoi,
+      title: "Clip Khối.mp4",
     },
-    component: clipK12,
+    component: ClipKhoi,
     defaultSize: {
       width: window.innerWidth,
       height: window.innerHeight,
@@ -359,10 +445,10 @@ export const appSettings = {
     maximized: false,
     multiInstance: false,
   },
-  baihatkhoi: {
+  BaiHatKhoi: {
     header: {
-      icon: bhk,
-      title: "Bài hát khối.mp3",
+      icon: bai_hat_khoi,
+      title: "Có bao giờ rời đi.mp3",
     },
     component: BaiHatKhoi,
     defaultSize: {
@@ -378,12 +464,12 @@ export const appSettings = {
     maximized: false,
     multiInstance: false,
   },
-  NNHQ: {
+  EasterEgg1: {
     header: {
-      icon: nnhq,
-      title: "",
+      icon: easter_egg_1,
+      title: "Lần cuối CA1 diễn Như Ngày Hôm Qua trên sân khấu (live audio)",
     },
-    component: NNHQ,
+    component: EasterEgg1,
     defaultSize: {
       width: window.innerWidth,
       height: window.innerHeight,
@@ -397,6 +483,44 @@ export const appSettings = {
     maximized: false,
     multiInstance: false,
   },
+  Yb: {
+    header: {
+      icon: yearbook,
+      title: "Yearbook 1720.pdf",
+    },
+    component: Yearbook,
+    defaultSize: {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    },
+    defaultOffset: {
+      x: 0,
+      y: 0,
+    },
+    resizable: false,
+    minimized: false,
+    maximized: false,
+    multiInstance: false,
+  },
+  MVKhoi: {
+    header: {
+      icon: mv_khoi,
+      title: "Có bao giờ rời đi.mp4",
+    },
+    component: MVKhoi,
+    defaultSize: {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    },
+    defaultOffset: {
+      x: 0,
+      y: 0,
+    },
+    resizable: false,
+    minimized: false,
+    maximized: false,
+    multiInstance: false,
+  }
 };
 
 export { InternetExplorer, Minesweeper, ErrorBox, MyComputer, Notepad, Winamp };
