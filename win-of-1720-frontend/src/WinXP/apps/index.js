@@ -31,19 +31,16 @@ import easter_egg_1 from "assets/windowsIcons/easter_egg_1.png";
 import yearbook from "assets/windowsIcons/dak12.png";
 import mv_khoi from "assets/windowsIcons/dak12.png";
 
+// const gen = () => {
+//   let id = -1;
+//   return () => {
+//     id += 1;
+//     return id;
+//   };
+// };
 
-
-const gen = () => {
-  let id = -1;
-  return () => {
-    id += 1;
-    return id;
-  };
-};
-
-
-const genId = gen();
-const genIndex = gen();
+// const genId = gen();
+// const genIndex = gen();
 
 export const defaultAppState = [
   // {
