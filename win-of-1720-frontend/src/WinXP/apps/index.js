@@ -31,19 +31,16 @@ import easter_egg_1 from "assets/windowsIcons/easter_egg_1.png";
 import yearbook from "assets/windowsIcons/dak12.png";
 import mv_khoi from "assets/windowsIcons/dak12.png";
 
+// const gen = () => {
+//   let id = -1;
+//   return () => {
+//     id += 1;
+//     return id;
+//   };
+// };
 
-
-const gen = () => {
-  let id = -1;
-  return () => {
-    id += 1;
-    return id;
-  };
-};
-
-
-const genId = gen();
-const genIndex = gen();
+// const genId = gen();
+// const genIndex = gen();
 
 export const defaultAppState = [
   // {
@@ -440,7 +437,7 @@ export const appSettings = {
       x: 0,
       y: 0,
     },
-    resizable: false,
+    resizable: true,
     minimized: false,
     maximized: false,
     multiInstance: false,
@@ -459,7 +456,7 @@ export const appSettings = {
       x: 0,
       y: 0,
     },
-    resizable: false,
+    resizable: true,
     minimized: false,
     maximized: false,
     multiInstance: false,
@@ -483,7 +480,7 @@ export const appSettings = {
     maximized: false,
     multiInstance: false,
   },
-  Yb: {
+  Yearbook: {
     header: {
       icon: yearbook,
       title: "Yearbook 1720.pdf",
@@ -497,7 +494,7 @@ export const appSettings = {
       x: 0,
       y: 0,
     },
-    resizable: false,
+    resizable: true,
     minimized: false,
     maximized: false,
     multiInstance: false,
@@ -516,7 +513,7 @@ export const appSettings = {
       x: 0,
       y: 0,
     },
-    resizable: false,
+    resizable: true,
     minimized: false,
     maximized: false,
     multiInstance: false,
