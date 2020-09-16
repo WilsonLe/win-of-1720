@@ -1,0 +1,35 @@
+{
+  "files": {
+<<<<<<< HEAD:win-of-1720-frontend/build/asset-manifest.json
+    "main.css": "/static/css/main.64920d58.chunk.css",
+    "main.js": "/static/js/main.90a1002a.chunk.js",
+    "main.js.map": "/static/js/main.90a1002a.chunk.js.map",
+=======
+    "main.css": "/static/css/main.947e7427.chunk.css",
+    "main.js": "/static/js/main.7def5cc2.chunk.js",
+    "main.js.map": "/static/js/main.7def5cc2.chunk.js.map",
+>>>>>>> master:build/asset-manifest.json
+    "runtime~main.js": "/static/js/runtime~main.ab04551f.js",
+    "runtime~main.js.map": "/static/js/runtime~main.ab04551f.js.map",
+    "static/js/2.57ee234c.chunk.js": "/static/js/2.57ee234c.chunk.js",
+    "static/js/2.57ee234c.chunk.js.map": "/static/js/2.57ee234c.chunk.js.map",
+    "index.html": "/index.html",
+<<<<<<< HEAD:win-of-1720-frontend/build/asset-manifest.json
+    "precache-manifest.aed86095c3971e0002b83faf488ac053.js": "/precache-manifest.aed86095c3971e0002b83faf488ac053.js",
+=======
+    "precache-manifest.11948c5901e24a2337413b0df540da46.js": "/precache-manifest.11948c5901e24a2337413b0df540da46.js",
+>>>>>>> master:build/asset-manifest.json
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.947e7427.chunk.css.map": "/static/css/main.947e7427.chunk.css.map",
+    "static/media/font.css": "/static/media/SVN-AGENCY-FB.462e12e2.ttf",
+    "static/media/all-programs.ico": "/static/media/all-programs.a48640a2.ico",
+    "static/media/desktopBackground.jpg": "/static/media/desktopBackground.a4432108.jpg",
+    "static/media/error.wav": "/static/media/error.199b5352.wav",
+    "static/media/find.svg": "/static/media/find.cfc00209.svg",
+    "static/media/narrator.ico": "/static/media/narrator.e23232f0.ico",
+    "static/media/restart.ico": "/static/media/restart.bfcfd28f.ico",
+    "static/media/restore.ico": "/static/media/restore.8e8ae78a.ico",
+    "static/media/smile.svg": "/static/media/smile.33211a17.svg",
+    "static/media/view-info.ico": "/static/media/view-info.415b027d.ico"
+  }
+}

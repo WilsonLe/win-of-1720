@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap&subset=vietnamese");
+
+@font-face {
+  font-family: "SVN";
+  src: url("SVN-AGENCY-FB.ttf") format("truetype");
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+}
+
+*,
+*:before,
+*:after,
+*:placeholder-shown {
+  font-family: inherit;
+}
