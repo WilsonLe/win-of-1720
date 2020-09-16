@@ -29,8 +29,10 @@ export default ({ postData, onPostEnlarge }) => {
 const Post = styled.div`
   font-family: system-ui, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular",
     sans-serif;
+  background: blue;
   height: 500px;
   width: 100%;
   overflow: scroll;
   align-content: center;
+  padding: 12px 12px 12px 12px;
 `;

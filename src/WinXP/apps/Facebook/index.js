@@ -35,7 +35,8 @@ const Facebook = styled.div`
 `;
 
 const Feed = styled.div`
-  margin: auto;
+  margin: 12px auto 12px auto;
+  padding: 12px 12px 12px 12px;
   width: 60vw;
   background: rgb(255, 235, 235);
 `;
