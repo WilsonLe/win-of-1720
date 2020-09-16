@@ -11,6 +11,7 @@ import BaiHatKhoi from "./BaiHatKhoi";
 import EasterEgg1 from "./EasterEgg1";
 import Yearbook from "./Yearbook";
 import MVKhoi from "./MVKhoi";
+import Facebook from "./Facebook";
 
 //import icons
 import iePaper from "assets/windowsIcons/ie-paper.png";
@@ -42,26 +43,26 @@ import mv_khoi from "assets/windowsIcons/dak12.png";
 // const genIndex = gen();
 
 export const defaultAppState = [
-  // {
-  //   component: MVKhoi,
-  //   header: {
-  //     title: "Có bao giờ rời đi.mp4",
-  //     icon: yearbook,
-  //   },
-  //   defaultSize: {
-  //     width: 700,
-  //     height: 500,
-  //   },
-  //   defaultOffset: {
-  //     x: 130,
-  //     y: 20,
-  //   },
-  //   resizable: false,
-  //   minimized: false,
-  //   maximized: true,
-  //   id: genId(),
-  //   zIndex: genIndex(),
-  // },
+  {
+    component: Facebook,
+    header: {
+      title: "17: /một • bảy • hai • không/",
+      icon: yearbook,
+    },
+    defaultSize: {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    },
+    defaultOffset: {
+      x: 0,
+      y: 0,
+    },
+    resizable: true,
+    minimized: false,
+    maximized: true,
+    id: 0,
+    zIndex: 0,
+  },
   // {
   //   component: Yearbook,
   //   header: {
@@ -206,6 +207,13 @@ export const defaultAppState = [
 ];
 
 export const defaultIconState = [
+  {
+    id: 11,
+    icon: yearbook,
+    title: "17: /một • bảy • hai • không/",
+    component: Facebook,
+    isFocus: false,
+  },
   {
     id: 10,
     icon: mv_khoi,
@@ -515,6 +523,25 @@ export const appSettings = {
     resizable: true,
     minimized: false,
     maximized: false,
+    multiInstance: false,
+  },
+  "17: /một • bảy • hai • không/": {
+    header: {
+      icon: yearbook,
+      title: "17: /một • bảy • hai • không/",
+    },
+    component: Facebook,
+    defaultSize: {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    },
+    defaultOffset: {
+      x: 0,
+      y: 0,
+    },
+    resizable: true,
+    minimized: false,
+    maximized: true,
     multiInstance: false,
   },
 };
