@@ -6,7 +6,6 @@
     "harmony-reflect": "^1.6.1",
     "lodash.samplesize": "^4.2.0",
     "react": "^16.8.6",
-    "react-device-detect": "^1.12.1",
     "react-dom": "^16.8.6",
     "react-ga": "^2.5.7",
     "react-lazyload": "^3.0.0",

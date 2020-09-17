@@ -1,8 +1,8 @@
 import React, { useReducer, useRef, useCallback } from "react";
 import styled, { keyframes } from "styled-components";
 import useMouse from "react-use/lib/useMouse";
+import useWindowSize from "react-use/lib/useWindowSize";
 import ga from "react-ga";
-import { isMobile } from "react-device-detect";
 import {
   ADD_APP,
   DEL_APP,
@@ -183,6 +183,7 @@ function WinXP() {
   const [state, dispatch] = useReducer(reducer, initState);
   const ref = useRef(null);
   const mouse = useMouse(ref);
+  const windowSize = useWindowSize();
   const focusedAppId = getFocusedAppId();
   const onFocusApp = useCallback((id) => {
     dispatch({ type: FOCUS_APP, payload: id });
@@ -220,11 +221,8 @@ function WinXP() {
   }
   function onMouseDownIcon(id, component) {
     dispatch({ type: FOCUS_ICON, payload: id });
-    if (isMobile) {
-      const appSetting = Object.values(appSettings).find(
-        (setting) => setting.component === component
-      );
-      dispatch({ type: ADD_APP, payload: appSetting });
+    if (windowSize.width < 1000) {
+      onDoubleClickIcon(component);
     }
   }
 

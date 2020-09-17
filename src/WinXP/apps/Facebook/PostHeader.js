@@ -4,7 +4,6 @@ import Avatar from "../../../assets/facebookAvatar.png";
 
 export default (props) => {
   // Avatar & name
-  //
   return (
     <Header>
       <ProfilePicture alt="Avatar" src={Avatar} />
@@ -14,8 +13,8 @@ export default (props) => {
 
 const Header = styled.div`
   font-family: inherit;
-  width: 100%
-  background:red;
+  width: 100%;
+  background: red;
   height: 43px;
 `;
 
