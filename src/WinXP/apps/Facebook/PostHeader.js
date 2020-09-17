@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Avatar from "../../../assets/facebookAvatar.png";
 
+// TODO: self implement show-more-text
+
 export default (props) => {
 	// Avatar & name
 	let _story = props.story ? props.story.slice(33) : "";
