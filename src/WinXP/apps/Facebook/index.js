@@ -5,7 +5,7 @@ import Post from "./Post";
 import postsDB from "./postDB";
 
 export default () => {
-	let posts = postsDB.slice(0, 100);
+	let posts = postsDB.slice(0, 10);
 
 	function onPostEnlarge() {}
 

@@ -8,23 +8,30 @@ export default (props) => {
 	// Avatar & name
 	let _story = props.story ? props.story.slice(33) : "";
 	return (
-		<Header>
-			<ProfilePicture alt="Avatar" src={Avatar} />
-			<Origin>
-				<div>
-					<Homelink
-						href="https://www.facebook.com/khoi12tdn"
-						style={{ fontWeight: "bold" }}
-					>
-						17: /một • bảy • hai • không/
-					</Homelink>
-					<span>{_story}</span>
-				</div>
-				<Time href={props.permalink_url}>{props.created_time}</Time>
-			</Origin>
-		</Header>
+		<PaddingContainer>
+			<Header>
+				<ProfilePicture alt="Avatar" src={Avatar} />
+				<Origin>
+					<div>
+						<Homelink
+							href="https://www.facebook.com/khoi12tdn"
+							style={{ fontWeight: "bold" }}
+						>
+							17: /một • bảy • hai • không/
+						</Homelink>
+						<span>{_story}</span>
+					</div>
+					<Time href={props.permalink_url}>{props.created_time}</Time>
+				</Origin>
+			</Header>
+		</PaddingContainer>
 	);
 };
+
+const PaddingContainer = styled.div`
+	height: auto;
+	padding: 0px 10px;
+`;
 
 const Header = styled.div`
 	display: flex;
