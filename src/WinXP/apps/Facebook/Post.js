@@ -15,7 +15,7 @@ export default ({ post, onPostEnlarge }) => {
 				icon={post.icon}
 				permalink_url={post.permalink_url}
 			/>
-			<PostCaption caption={post.message} />
+			<PostCaption message={post.message} />
 			<PostAttachment
 				attachments={post.attachments}
 				properties={post.properties}
@@ -28,7 +28,7 @@ export default ({ post, onPostEnlarge }) => {
 };
 
 const Post = styled.div`
-	height: 500px;
+	height: auto;
 	width: 100%;
 	padding: 12px 12px 12px 12px;
 	margin-bottom: 12px;

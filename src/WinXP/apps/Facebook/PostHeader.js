@@ -29,7 +29,8 @@ const Header = styled.div`
 	flex-direction: row;
 	width: 100%;
 	height: auto;
-	background: #ffd2cc;
+	margin-bottom: 12px;
+	background: #ffe8e6;
 	font-family: inherit;
 `;
 
@@ -58,6 +59,7 @@ const Homelink = styled.a`
 `;
 
 const Time = styled.a`
+	margin-top: 0.1rem;
 	color: #90949c;
 	font-size: 0.8em;
 `;
