@@ -6,18 +6,15 @@ import postsDB from "./postDB";
 
 export default () => {
   let posts = postsDB.slice(0, 10);
+
   function onPostEnlarge() {}
 
   return (
     <Facebook>
-      <Feed>
+      <Feed id="Feed">
         {posts.map((post) => (
           <LazyLoad key={post.id}>
-            <Post
-              key={post.id}
-              postData={post}
-              onPostEnlarge={onPostEnlarge}
-            ></Post>
+            <Post key={post.id} post={post} onPostEnlarge={onPostEnlarge} />
           </LazyLoad>
         ))}
       </Feed>
@@ -28,14 +25,15 @@ export default () => {
 const Facebook = styled.div`
   height: 100%;
   width: 100%;
-  background: rgb(222, 222, 222);
+  background: black;
   overflow: scroll;
   align-content: center;
 `;
 
 const Feed = styled.div`
-  margin: 12px auto 12px auto;
-  padding: 12px 12px 12px 12px;
-  width: 60vw;
-  background: rgb(255, 235, 235);
+  margin: 60px auto auto auto;
+  padding: 12px 12px;
+  /* width: 60vw; //FIXME: responsive */
+  width: 100%;
+  /* background: #ccddff; //FIXME: */
 `;

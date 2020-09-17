@@ -6,22 +6,22 @@ import PostAttachment from "./PostAttachment";
 import PostReaction from "./PostReaction";
 import PostComment from "./PostComment";
 
-export default ({ postData, onPostEnlarge }) => {
+export default ({ post, onPostEnlarge }) => {
   return (
     <Post>
       <PostHeader
-        created_time={postData.created_time}
-        story={postData.story}
-        icon={postData.icon}
-        permalink_url={postData.permalink_url}
+        created_time={post.created_time}
+        story={post.story}
+        icon={post.icon}
+        permalink_url={post.permalink_url}
       />
-      <PostCaption caption={postData.message} />
+      <PostCaption caption={post.message} />
       <PostAttachment
-        attachments={postData.attachments}
-        properties={postData.properties}
+        attachments={post.attachments}
+        properties={post.properties}
       />
-      <PostReaction reactions={postData.reactions} shares={postData.shares} />
-      <PostComment comments={postData.comments} />
+      <PostReaction reactions={post.reactions} shares={post.shares} />
+      <PostComment comments={post.comments} />
     </Post>
   );
 };
@@ -29,10 +29,12 @@ export default ({ postData, onPostEnlarge }) => {
 const Post = styled.div`
   font-family: system-ui, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular",
     sans-serif;
-  background: blue;
   height: 500px;
   width: 100%;
   overflow: scroll;
   align-content: center;
   padding: 12px 12px 12px 12px;
+  margin-bottom: 12px;
+  border: 5px solid green; // FIXME:
+  background: #21cbd2; // FIXME:
 `;
