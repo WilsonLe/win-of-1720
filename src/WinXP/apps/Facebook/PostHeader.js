@@ -64,7 +64,18 @@ const Origin = styled.div`
 `;
 
 const Homelink = styled.a`
-	color: #2b4f93;
+	background-image: linear-gradient(
+		to right,
+		#f25022,
+		#71af10,
+		#3985b5,
+		#ffb901
+	);
+	background-clip: text;
+	color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	/* color: #2b4f93; */
 `;
 
 const Time = styled.a`

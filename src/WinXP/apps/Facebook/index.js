@@ -38,5 +38,5 @@ const Feed = styled.div`
 	padding: 12px 12px;
 	/* width: 60vw; //FIXME: responsive */
 	width: 100%;
-	background: #ccddff; //FIXME:
+	background: #dadde1; //FIXME:
 `;
