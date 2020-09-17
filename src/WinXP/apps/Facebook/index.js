@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import LazyLoad from "react-lazyload";
 import Post from "./Post";
-import postsDB from "./postDB";
+import { getPostDB } from "./PostDB";
 
 export default () => {
-	let posts = postsDB.slice(0, 10);
+	const [posts, setPosts] = useState([]);
+	useEffect(() => {
+		let res = getPostDB();
+		setPosts(res);
+	}, []);
 
 	function onPostEnlarge() {}
 

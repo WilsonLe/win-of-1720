@@ -1,4 +1,4 @@
-export default [
+const postDatabase = [
 	{
 		id: "2034783130179068_3303155153108435",
 		created_time: "2020-08-31T13:00:51+0000",
@@ -7723,3 +7723,7 @@ export default [
 		},
 	},
 ];
+
+export function getPostDB() {
+	return postDatabase;
+}
