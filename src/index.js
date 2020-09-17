@@ -12,17 +12,17 @@ ReactDOM.render(<App />, document.getElementById("root"));
 serviceWorker.unregister();
 
 if (module.hot && !window.frameElement) {
-  console.log("HMR enabled");
-  module.hot.accept("./App", () => {
-    const NextApp = require("./App").default;
-    ReactDOM.render(<NextApp />, document.getElementById("root"));
-  });
+	console.log("HMR enabled");
+	module.hot.accept("./App", () => {
+		const NextApp = require("./App").default;
+		ReactDOM.render(<NextApp />, document.getElementById("root"));
+	});
 }
 
 //AFTER FINISH RENDER
 const delayInMilliseconds = 0; // default 2500
 setTimeout(function () {
-  //code to be exe after delay:
-  document.getElementById("loader").remove();
-  document.getElementById("root").style.visibility = "visible";
+	//code to be exe after delay:
+	document.getElementById("loader").remove();
+	document.getElementById("root").style.visibility = "visible";
 }, delayInMilliseconds);
