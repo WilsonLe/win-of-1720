@@ -23,7 +23,7 @@ const Div = styled.div`
   height: 100%;
   width: 100%;
   background: white;
-  overflow: scroll;
+  overflow-y: scroll;
   align-content: center;
 `;
 export default Yearbook;

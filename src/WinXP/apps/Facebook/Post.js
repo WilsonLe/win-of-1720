@@ -27,14 +27,13 @@ export default ({ post, onPostEnlarge }) => {
 };
 
 const Post = styled.div`
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular",
-    sans-serif;
   height: 500px;
   width: 100%;
-  overflow: scroll;
-  align-content: center;
   padding: 12px 12px 12px 12px;
   margin-bottom: 12px;
-  border: 5px solid green; // FIXME:
+  align-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular",
+    sans-serif;
+  border: 5px solid #d0ffcc; // FIXME:
   background: #21cbd2; // FIXME:
 `;

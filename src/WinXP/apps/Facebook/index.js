@@ -25,15 +25,14 @@ export default () => {
 const Facebook = styled.div`
   height: 100%;
   width: 100%;
-  background: black;
-  overflow: scroll;
-  align-content: center;
+  background: white;
+  overflow-y: scroll;
 `;
 
 const Feed = styled.div`
-  margin: 60px auto auto auto;
+  margin: 60px auto;
   padding: 12px 12px;
   /* width: 60vw; //FIXME: responsive */
   width: 100%;
-  /* background: #ccddff; //FIXME: */
+  background: #ccddff; //FIXME:
 `;

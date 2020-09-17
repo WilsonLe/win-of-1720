@@ -25,25 +25,25 @@ export default (props) => {
 };
 
 const Header = styled.div`
-  font-family: inherit;
-  width: 100%;
-  background: red;
-  height: auto;
   display: flex;
   flex-direction: row;
+  width: 100%;
+  height: auto;
+  background: #ffd2cc;
+  font-family: inherit;
 `;
 
 const ProfilePicture = styled.img`
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   width: 40px;
   height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
 `;
 
 const Origin = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 0.1em;
+  margin-top: 0.3em;
   margin-left: 20px;
   a {
     text-decoration: none;
@@ -58,6 +58,6 @@ const Homelink = styled.a`
 `;
 
 const Time = styled.a`
-  font-size: 0.8em;
   color: #90949c;
+  font-size: 0.8em;
 `;
