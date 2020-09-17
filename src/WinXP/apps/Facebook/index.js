@@ -31,6 +31,26 @@ const Facebook = styled.div`
 	width: 100%;
 	background: white;
 	overflow-y: scroll;
+
+	::-webkit-scrollbar {
+		width: 6px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: #dadde1;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: linear-gradient(
+			to bottom,
+			#dadde1,
+			#f25022,
+			#71af10,
+			#3985b5,
+			#ffb901,
+			#dadde1
+		);
+	}
 `;
 
 const Feed = styled.div`
