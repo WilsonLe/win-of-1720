@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import LazyLoad from "react-lazyload";
 import Post from "./Post";
 import { getPostDB } from "./PostDB";
 
+// TODO: move to serverless API
+
 export default () => {
+	const refContainer = useRef(null);
 	const [posts, setPosts] = useState([]);
+
 	useEffect(() => {
 		let res = getPostDB();
 		setPosts(res);
@@ -14,10 +18,16 @@ export default () => {
 	function onPostEnlarge() {}
 
 	return (
-		<Facebook>
-			<Feed id="Feed">
+		<Facebook ref={refContainer}>
+			<Feed>
 				{posts.map((post) => (
-					<LazyLoad key={post.id}>
+					<LazyLoad
+						overflow
+						scrollContainer={refContainer}
+						key={post.id}
+						height={500}
+						offset={4000}
+					>
 						<Post
 							key={post.id}
 							post={post}
@@ -41,7 +51,7 @@ const Facebook = styled.div`
 	}
 
 	::-webkit-scrollbar-track {
-		background: #dadde1;
+		background: #f0f2f5;
 	}
 
 	::-webkit-scrollbar-thumb {
@@ -64,4 +74,8 @@ const Feed = styled.div`
 	width: 100%;
 	max-width: 800px;
 	background: #f0f2f5; //FIXME:
+
+	.lazyload-wrapper {
+		margin-bottom: 12px;
+	}
 `;

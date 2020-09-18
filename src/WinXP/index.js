@@ -24,7 +24,7 @@ import Footer from "./Footer";
 import Windows from "./Windows";
 import Icons from "./Icons";
 import { DashedBox } from "components";
-import desktopBackground from "../assets/desktopBackground.jpg";
+import desktopBackground from "../assets/desktopBackground-min-resized.jpg";
 
 const initState = {
 	apps: defaultAppState,

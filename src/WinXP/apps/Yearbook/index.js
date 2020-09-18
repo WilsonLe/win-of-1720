@@ -1,23 +1,37 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
-import yearbookPages from "./yearbookDB";
+import LazyLoad from "react-lazyload";
+import { getYearbookDB } from "./yearbookDB";
 
-const Yearbook = ({ onClose, isFocus }) => {
+export default () => {
+	const refContainer = useRef(null);
+	const [yearbookPages, setYearbookPages] = useState([]);
+
+	useEffect(() => {
+		let res = getYearbookDB();
+		setYearbookPages(res);
+	}, []);
+
 	return (
-		<Div>
-			{yearbookPages.map(({ id, src }) => (
-				<Page key={id} alt={"page-" + id} src={src} />
+		<Div ref={refContainer}>
+			{yearbookPages.map((page) => (
+				<LazyLoad
+					overflow
+					scrollContainer={refContainer}
+					key={page.id}
+					height={500}
+					offset={4000}
+				>
+					<Page
+						key={page.id}
+						alt={"page-" + page.id}
+						src={page.src}
+					/>
+				</LazyLoad>
 			))}
 		</Div>
 	);
 };
-
-const Page = styled.img`
-	width: 100%;
-	display: block;
-	margin: auto;
-	pointer-events: none;
-`;
 
 const Div = styled.div`
 	height: 100%;
@@ -25,5 +39,30 @@ const Div = styled.div`
 	background: white;
 	overflow-y: scroll;
 	align-content: center;
+	::-webkit-scrollbar {
+		width: 6px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: #fff;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: linear-gradient(
+			to bottom,
+			#dadde1,
+			#f25022,
+			#71af10,
+			#3985b5,
+			#ffb901,
+			#dadde1
+		);
+	}
 `;
-export default Yearbook;
+
+const Page = styled.img`
+	width: 100%;
+	display: block;
+	margin: auto;
+	pointer-events: none;
+`;

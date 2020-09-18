@@ -43,7 +43,6 @@ export default ({ post, onPostEnlarge }) => {
 const Post = styled.div`
 	height: auto;
 	width: 100%;
-	margin-bottom: 12px;
 	align-content: center;
 	font-family: system-ui, -apple-system, BlinkMacSystemFont,
 		".SFNSText-Regular", sans-serif;

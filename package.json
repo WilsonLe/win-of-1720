@@ -15,7 +15,8 @@
 	},
 	"scripts": {
 		"start": "react-scripts start",
-		"build": "react-scripts build",
+		"build": "react-scripts build && gzipper c -v ./build",
+		"zip": "gzipper c -v ./build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"now-build": "react-scripts build",
@@ -36,6 +37,7 @@
 		"node": ">=10.16.0"
 	},
 	"devDependencies": {
+		"gzipper": "^4.0.2",
 		"prettier": "2.1.1",
 		"webpack-bundle-analyzer": "^3.9.0"
 	}

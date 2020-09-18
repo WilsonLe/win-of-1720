@@ -27,4 +27,6 @@ const AttachmentContainer = styled.div`
 	margin: 10px auto;
 `;
 
-const Img = styled.img``;
+const Img = styled.img`
+	background: #eee no-repeat 50% 50% / cover;
+`;

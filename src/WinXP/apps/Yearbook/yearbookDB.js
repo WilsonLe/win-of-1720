@@ -1,4 +1,4 @@
-export default [
+const yearbookDatabase = [
 	{ id: 1, src: "assets/yearbook/YB-0.jpg" },
 	{ id: 2, src: "assets/yearbook/YB-2.jpg" },
 	{ id: 3, src: "assets/yearbook/YB-3.jpg" },
@@ -71,3 +71,7 @@ export default [
 	{ id: 70, src: "assets/yearbook/YB-71.jpg" },
 	{ id: 71, src: "assets/yearbook/YB-72.jpg" },
 ];
+
+export function getYearbookDB() {
+	return yearbookDatabase;
+}
