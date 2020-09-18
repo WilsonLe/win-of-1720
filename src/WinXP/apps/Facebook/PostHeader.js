@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Avatar from "../../../assets/facebookAvatar.png";
 
-// TODO: self implement show-more-text
+// TODO: Create date formatter
 
 export default (props) => {
 	// Avatar & name
@@ -13,10 +13,7 @@ export default (props) => {
 				<ProfilePicture alt="Avatar" src={Avatar} />
 				<Origin>
 					<div>
-						<Homelink
-							href="https://www.facebook.com/khoi12tdn"
-							style={{ fontWeight: "bold" }}
-						>
+						<Homelink href="https://www.facebook.com/khoi12tdn">
 							17: /một • bảy • hai • không/
 						</Homelink>
 						<span>{_story}</span>
@@ -64,6 +61,7 @@ const Origin = styled.div`
 `;
 
 const Homelink = styled.a`
+	font-weight: bold;
 	background-image: linear-gradient(
 		to right,
 		#f25022,

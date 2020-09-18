@@ -1,128 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap&subset=vietnamese");
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: "Noto Sans", sans-serif;
+	font-size: 14px;
+}
+
+*,
+*:before,
+*:after,
+*:placeholder-shown {
+	font-family: inherit;
+}
+
 #loader {
-  position: fixed;
-  z-index: 99;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
+	margin: auto;
+	z-index: 99;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+	font-size: 10px;
 }
 
 #loader #row1 {
-  display: flex;
-  flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 #loader #xp {
-  height: 10em;
-  width: 10em;
-  padding-bottom: 0.5em;
-  padding-left: 0.5em;
-}
-#loader .windows-boot {
-  width: 21.5em;
-  height: 20em;
-  font-size: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+	height: 10em;
+	width: 10em;
+	padding-bottom: 0.5em;
+	padding-left: 0.5em;
 }
 
 #loader .logo p {
-  color: white;
-  font-family: "Arial", sans-serif;
-  margin: 0;
-  padding: 0;
+	color: white;
+	font-family: "Arial", sans-serif;
+	margin: 0;
+	padding: 0;
 }
 #loader .logo .ms {
-  font-size: 1.3em;
-  font-weight: lighter;
-  line-height: 1em;
-  padding-bottom: 0.1em;
+	font-size: 1.3em;
+	font-weight: lighter;
+	line-height: 1em;
+	padding-bottom: 0.1em;
 }
 #loader #botify {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  vertical-align: bottom;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	vertical-align: bottom;
 }
+
 #loader .logo .ms::after {
-  content: "\00a9";
-  font-size: 0.625em;
-  vertical-align: top;
-  position: relative;
-  top: -0.3em;
-  left: 0.2em;
+	content: "\00a9";
+	font-size: 0.625em;
+	vertical-align: top;
+	position: relative;
+	top: -0.3em;
+	left: 0.2em;
 }
 
 #loader .logo .win {
-  font-size: 4.2em;
-  font-weight: bold;
-  line-height: 86%;
+	font-size: 4.2em;
+	font-weight: bold;
+	line-height: 86%;
 }
 
 #loader .logo .win::after {
-  content: "OF";
-  font-size: 0.6em;
-  vertical-align: top;
-  position: relative;
-  top: -0.4em;
-  color: tomato;
+	content: "OF";
+	font-size: 0.6em;
+	vertical-align: top;
+	position: relative;
+	top: -0.4em;
+	color: tomato;
 }
 
 #loader .logo .pro {
-  font-size: 2em;
-  font-weight: lighter;
-  line-height: 1em;
-  padding-left: 0.2em;
+	font-size: 2em;
+	font-weight: lighter;
+	line-height: 1em;
+	padding-left: 0.2em;
 }
 
 #loader .bar {
-  width: 15em;
-  height: 2em;
-  border: 0.2em solid silver;
-  border-radius: 0.7em;
-  position: relative;
-  padding: 0.2em;
-  overflow: hidden;
+	width: 15em;
+	height: 2em;
+	border: 0.2em solid silver;
+	border-radius: 0.7em;
+	position: relative;
+	margin-top: 1rem;
+	padding: 0.2em;
+	overflow: hidden;
 }
 
 #loader .bar::before {
-  content: "";
-  position: absolute;
-  width: 3em;
-  height: 70%;
-  border-radius: 0.2em;
-  background: linear-gradient(
-      to right,
-      transparent 30%,
-      black 30%,
-      black 35%,
-      transparent 35%,
-      transparent 65%,
-      black 65%,
-      black 70%,
-      transparent 70%
-    ),
-    linear-gradient(
-      blue 0%,
-      royalblue 17%,
-      deepskyblue 32%,
-      deepskyblue 45%,
-      royalblue 60%,
-      blue 100%
-    );
-  filter: brightness(1.2);
-  animation: run 2s linear infinite;
+	content: "";
+	position: absolute;
+	width: 3em;
+	height: 70%;
+	border-radius: 0.2em;
+	background: linear-gradient(
+			to right,
+			transparent 30%,
+			black 30%,
+			black 35%,
+			transparent 35%,
+			transparent 65%,
+			black 65%,
+			black 70%,
+			transparent 70%
+		),
+		linear-gradient(
+			blue 0%,
+			royalblue 17%,
+			deepskyblue 32%,
+			deepskyblue 45%,
+			royalblue 60%,
+			blue 100%
+		);
+	filter: brightness(1.2);
+	animation: run 2s linear infinite;
 }
 
 @keyframes run {
-  from {
-    transform: translateX(-3em);
-  }
+	from {
+		transform: translateX(-3em);
+	}
 
-  to {
-    transform: translateX(15em);
-  }
+	to {
+		transform: translateX(15em);
+	}
 }

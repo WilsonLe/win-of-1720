@@ -4,7 +4,6 @@ import Minesweeper from "./Minesweeper";
 import ErrorBox from "./ErrorBox";
 import MyComputer from "./MyComputer";
 import Notepad from "./Notepad";
-import Winamp from "./Winamp";
 import Paint from "./Paint";
 import ClipKhoi from "./ClipKhoi";
 import BaiHatKhoi from "./BaiHatKhoi";
@@ -22,7 +21,6 @@ import computer from "assets/windowsIcons/676(16x16).png";
 import computerLarge from "assets/windowsIcons/676(32x32).png";
 import notepad from "assets/windowsIcons/327(16x16).png";
 // import notepadLarge from 'assets/windowsIcons/327(32x32).png';
-import winamp from "assets/windowsIcons/winamp.png";
 import paintLarge from "assets/windowsIcons/680(32x32).png";
 import paint from "assets/windowsIcons/680(16x16).png";
 import clip_khoi from "assets/windowsIcons/dak12.png";
@@ -391,26 +389,6 @@ export const appSettings = {
 		maximized: window.innerWidth < 800,
 		multiInstance: true,
 	},
-	Winamp: {
-		header: {
-			icon: winamp,
-			title: "Winamp",
-			invisible: true,
-		},
-		component: Winamp,
-		defaultSize: {
-			width: 0,
-			height: 0,
-		},
-		defaultOffset: {
-			x: 0,
-			y: 0,
-		},
-		resizable: false,
-		minimized: false,
-		maximized: false,
-		multiInstance: false,
-	},
 	Paint: {
 		header: {
 			icon: paint,
@@ -547,4 +525,4 @@ export const appSettings = {
 	},
 };
 
-export { InternetExplorer, Minesweeper, ErrorBox, MyComputer, Notepad, Winamp };
+export { InternetExplorer, Minesweeper, ErrorBox, MyComputer, Notepad };
