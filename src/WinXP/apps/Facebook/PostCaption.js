@@ -20,11 +20,14 @@ export default (props) => {
 				{show ? props.message : cutText(props.message)}{" "}
 				<span
 					onClick={() => {
+						if (show === true) {
+							props.scrollToTop();
+						}
 						setShow(!show);
 					}}
 					className="caption__seemore"
 				>
-					{show ? "See less" : "See more"}
+					{show ? "\n\nSee less" : "See more"}
 				</span>
 			</p>
 		);
@@ -39,22 +42,22 @@ export default (props) => {
 
 const PaddingContainer = styled.div`
 	height: auto;
-	padding: 0px 10px;
+	padding: 0px 16px;
 `;
 
 const Caption = styled.div`
 	margin: 8px 0px;
-	background: #fff3e7;
+	/* background: #fff3e7; */
 	font-family: inherit;
-
 	p {
+		color: #1c1e21;
 		white-space: pre-line;
 	}
 
 	.caption__seemore {
-		font-weight: bold;
+		font-weight: 650;
 		text-decoration: none;
-		color: #0000ff;
+		color: #050505;
 		:hover {
 			text-decoration: underline;
 		}

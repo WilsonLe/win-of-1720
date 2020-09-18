@@ -33,7 +33,7 @@ export default () => {
 const Facebook = styled.div`
 	height: 100%;
 	width: 100%;
-	background: white;
+	background: #f0f2f5;
 	overflow-y: scroll;
 
 	::-webkit-scrollbar {
@@ -59,8 +59,9 @@ const Facebook = styled.div`
 
 const Feed = styled.div`
 	margin: 60px auto;
-	padding: 12px 12px;
+	padding: 12px 10px;
 	/* width: 60vw; //FIXME: responsive */
 	width: 100%;
-	background: #dadde1; //FIXME:
+	max-width: 800px;
+	background: #f0f2f5; //FIXME:
 `;

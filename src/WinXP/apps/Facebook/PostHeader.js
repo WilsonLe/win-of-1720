@@ -30,7 +30,7 @@ export default (props) => {
 
 const PaddingContainer = styled.div`
 	height: auto;
-	padding: 0px 10px;
+	padding: 0px 16px;
 `;
 
 const Header = styled.div`
@@ -39,7 +39,7 @@ const Header = styled.div`
 	width: 100%;
 	height: auto;
 	margin-bottom: 12px;
-	background: #ffe8e6;
+	/* background: #ffe8e6; */
 	font-family: inherit;
 `;
 
