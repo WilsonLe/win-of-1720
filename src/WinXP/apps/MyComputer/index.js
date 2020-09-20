@@ -230,78 +230,6 @@ function MyComputer({ onClose }) {
 								</div>
 							</div>
 						</div>
-						{/* detail box */}
-						{/* <div className="com__content__left__card">
-              <div className="com__content__left__card__header">
-                <div className="com__content__left__card__header__text">
-                  Details
-                </div>
-                <img
-                  src={pullup}
-                  alt=""
-                  className="com__content__left__card__header__img"
-                />
-              </div>
-              <div className="com__content__left__card__content">
-                <div className="com__content__left__card__row">
-                  <iframe
-                    title="ghbtn"
-                    style={{ margin: '0 0 3px -1px', height: '30px' }}
-                    src="https://ghbtns.com/github-btn.html?user=ShizukuIchi&repo=winXP&type=star&count=true&size=large"
-                    frameBorder="0"
-                    scrolling="0"
-                    width="170px"
-                    height="20px"
-                  />
-                </div>
-                <div className="com__content__left__card__row">
-                  <img
-                    className="com__content__left__card__img"
-                    src="https://cdn.iconscout.com/icon/free/png-256/medium-1425876-1205067.png"
-                    alt="control"
-                  />
-                  <ga.OutboundLink
-                    eventLabel="https://medium.com/@ShizukuIchi"
-                    to="https://medium.com/@ShizukuIchi"
-                    className="com__content__left__card__text link"
-                    target="_blank"
-                  >
-                    Medium
-                  </ga.OutboundLink>
-                </div>
-                <div className="com__content__left__card__row">
-                  <img
-                    className="com__content__left__card__img"
-                    src="https://image.flaticon.com/icons/png/128/179/179312.png"
-                    alt="control"
-                  />
-                  <ga.OutboundLink
-                    eventLabel="https://sh1zuku.csie.io/blog"
-                    to="https://sh1zuku.csie.io/blog"
-                    className="com__content__left__card__text link"
-                    target="_blank"
-                  >
-                    Blog
-                  </ga.OutboundLink>
-                </div>
-                <div className="com__content__left__card__row">
-                  <img
-                    className="com__content__left__card__img"
-                    src={mine}
-                    alt="control"
-                  />
-                  <ga.OutboundLink
-                    eventLabel="https://github.com/ShizukuIchi/minesweeper"
-                    to="https://github.com/ShizukuIchi/minesweeper"
-                    className="com__content__left__card__text link"
-                    target="_blank"
-                  >
-                    Minesweeper(mobile)
-                  </ga.OutboundLink>
-                </div>
-              </div>
-            </div> */}
-						{/* end details box */}
 					</div>
 					<div className="com__content__right">
 						<div className="com__content__right__card">
@@ -354,25 +282,6 @@ function MyComputer({ onClose }) {
 								</div>
 							</div>
 						</div>
-						{/* <div className="com__content__right__card">
-              <div className="com__content__right__card__header">
-                Devices with Removable Storage
-              </div>
-              <div className="com__content__right__card__content">
-                <div className="com__content__right__card__item">
-                  <div className="com__content__right__card__img-container">
-                    <img
-                      src={cd}
-                      alt="cd"
-                      className="com__content__right__card__img"
-                    />
-                  </div>
-                  <div className="com__content__right__card__text">
-                    CD Drive (D:)
-                  </div>
-                </div>
-              </div>
-            </div> */}
 						<div className="com__content__right__card com__content__right__card--me">
 							<div className="com__content__right__card__header">
 								It's a hello from

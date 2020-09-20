@@ -1,6 +1,6 @@
 import React from "react";
 
-const BaiHatKhoi = ({ onClose, isFocus }) => {
+const BaiHatKhoi = () => {
 	return (
 		<iframe
 			title="#CBGRD"

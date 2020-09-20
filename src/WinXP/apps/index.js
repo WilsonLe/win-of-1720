@@ -55,7 +55,7 @@ export const defaultAppState = [
 			x: 0,
 			y: 0,
 		},
-		resizable: true,
+		resizable: false,
 		minimized: false,
 		maximized: true,
 		id: 0,
@@ -120,88 +120,7 @@ export const defaultAppState = [
 	//   maximized: true,
 	//   id: genId(),
 	//   zIndex: genIndex(),
-	// },
-	// {
-	//   component: InternetExplorer,
-	//   header: {
-	//     title: 'Internet Explorer',
-	//     icon: iePaper,
-	//   },
-	//   defaultSize: {
-	//     width: 700,
-	//     height: 500,
-	//   },
-	//   defaultOffset: {
-	//     x: 130,
-	//     y: 20,
-	//   },
-	//   resizable: true,
-	//   minimized: false,
-	//   maximized: window.innerWidth < 800,
-	//   id: genId(),
-	//   zIndex: genIndex(),
-	// },
-	// {
-	//   component: Minesweeper,
-	//   header: {
-	//     title: 'Minesweeper',
-	//     icon: mine,
-	//   },
-	//   defaultSize: {
-	//     width: 0,
-	//     height: 0,
-	//   },
-	//   defaultOffset: {
-	//     x: 180,
-	//     y: 170,
-	//   },
-	//   resizable: false,
-	//   minimized: false,
-	//   maximized: false,
-	//   id: genId(),
-	//   zIndex: genIndex(),
-	// },
-	// {
-	//   component: Winamp,
-	//   header: {
-	//     title: 'Winamp',
-	//     icon: winamp,
-	//     invisible: true,
-	//   },
-	//   defaultSize: {
-	//     width: 0,
-	//     height: 0,
-	//   },
-	//   defaultOffset: {
-	//     x: 0,
-	//     y: 0,
-	//   },
-	//   resizable: false,
-	//   minimized: false,
-	//   maximized: false,
-	//   id: genId(),
-	//   zIndex: genIndex(),
-	// },
-	// {
-	//   component: MyComputer,
-	//   header: {
-	//     title: 'My Computer',
-	//     icon: computer,
-	//   },
-	//   defaultSize: {
-	//     width: 660,
-	//     height: 500,
-	//   },
-	//   defaultOffset: {
-	//     x: 250,
-	//     y: 40,
-	//   },
-	//   resizable: true,
-	//   minimized: false,
-	//   maximized: window.innerWidth < 800,
-	//   id: genId(),
-	//   zIndex: genIndex(),
-	// },
+	// }
 ];
 
 export const defaultIconState = [
@@ -266,13 +185,6 @@ export const defaultIconState = [
 	//   icon: notepadLarge,
 	//   title: 'Notepad',
 	//   component: Notepad,
-	//   isFocus: false,
-	// },
-	// {
-	//   id: 4,
-	//   icon: winamp,
-	//   title: 'Winamp',
-	//   component: Winamp,
 	//   isFocus: false,
 	// },
 	{
