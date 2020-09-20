@@ -292,6 +292,7 @@ function MyComputer({ onClose }) {
 									to="https://www.facebook.com/dnhuan"
 									className="com__content__right__card__item--me"
 									target="_blank"
+									trackerNames={[]}
 								>
 									<img
 										className="com__content__right__card__img"
@@ -307,6 +308,7 @@ function MyComputer({ onClose }) {
 									to="https://wilsonle.me/"
 									className="com__content__right__card__item--me"
 									target="_blank"
+									trackerNames={[]}
 								>
 									<img
 										className="com__content__right__card__img"
