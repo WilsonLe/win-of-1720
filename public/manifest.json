@@ -1,15 +1,15 @@
 {
-  "short_name": "WinXP",
-  "name": "Windows XP in React and Hooks",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "16x16",
-      "type": "image/x-icon"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#fff",
-  "background_color": "#fff"
+	"short_name": "Windows Of 1720",
+	"name": "Windows Of 1720 - here our memories stay forever.",
+	"icons": [
+		{
+			"src": "favicon.ico",
+			"sizes": "16x16",
+			"type": "image/x-icon"
+		}
+	],
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#fff",
+	"background_color": "#fff"
 }

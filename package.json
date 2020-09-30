@@ -1,40 +1,43 @@
 {
-  "name": "win-of-1720-frontend",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "lodash.samplesize": "^4.2.0",
-    "react": "^16.8.6",
-    "react-device-detect": "^1.12.1",
-    "react-dom": "^16.8.6",
-    "react-ga": "^2.5.7",
-    "react-scripts": "3.1.1",
-    "react-use": "^7.0.1",
-    "styled-components": "^4.2.0",
-    "webamp": "^1.3.2-beta.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "now-build": "react-scripts build"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not ie <= 11",
-      "not op_mini all"
-    ]
-  },
-  "engines": {
-    "node": ">=10.16.0"
-  },
-  "devDependencies": {
-    "prettier": "2.1.1"
-  }
+	"name": "win-of-1720-frontend",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"lodash.samplesize": "^4.2.0",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"react-ga": "^2.5.7",
+		"react-lazyload": "^3.0.0",
+		"react-scripts": "3.1.1",
+		"react-use": "^7.0.1",
+		"styled-components": "^4.2.0"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build && gzipper c -v ./build",
+		"zip": "gzipper c -v ./build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"now-build": "react-scripts build",
+		"analyse": "node analyse.js"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not ie <= 11",
+			"not op_mini all"
+		]
+	},
+	"engines": {
+		"node": ">=10.16.0"
+	},
+	"devDependencies": {
+		"gzipper": "^4.0.2",
+		"prettier": "2.1.1",
+		"webpack-bundle-analyzer": "^3.9.0"
+	}
 }

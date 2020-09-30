@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css","font.css"],"names":[],"mappings":"AAAA,MACC,WACD,CCFA,WACC,eAAkB,CAClB,oEACD","file":"main.d77ca41b.chunk.css","sourcesContent":["#root {\n\theight: 100%;\n}\n","@font-face {\n\tfont-family: \"SVN\";\n\tsrc: url(\"SVN-AGENCY-FB.ttf\") format(\"truetype\");\n}\n"]}
