@@ -17,3 +17,4 @@ This digital yearbook consists of many projects that we, TDN-ers class of 17-20,
 
 # Contributors
 This website is made by [Wilson Le](https://wilsonle.me) and [Huan Doan Ngoc](https://github.com/dnhuan)
+
